@@ -1,4 +1,4 @@
-<DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
   <Entity id="User" name="User" duration="persistent" gr:x="15" gr:y="25" gr:hideAttributes="false" attributeOrder="userOID userName password email">
     <Attribute name="oid" id="userOID" type="integer" key="true"/>
     <Attribute name="userName" id="userName" type="string"/>
@@ -125,4 +125,5 @@
     <RelationshipRole1 id="rel16#role31" name="WorkerTaskStatusToTask" maxCard="N"/>
     <RelationshipRole2 id="rel16#role32" name="TaskToWorkerTaskStatus" maxCard="1"/>
   </Relationship>
+  <db:Database id="db2" name="MyDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/wse" username="postgres" cryptedPassword="true" password="cGFzc3dvcmQ=" schema="public"/>
 </DataModel>
