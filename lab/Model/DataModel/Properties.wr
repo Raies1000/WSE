@@ -1,15 +1,15 @@
 <DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email">
+  <Entity id="User" name="User" duration="persistent" gr:x="15" gr:y="25" gr:hideAttributes="false" attributeOrder="userOID userName password email">
     <Attribute name="oid" id="userOID" type="integer" key="true"/>
     <Attribute name="userName" id="userName" type="string"/>
     <Attribute name="password" id="password" type="password"/>
     <Attribute name="email" id="email" type="string"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="45" gr:hideAttributes="false" attributeOrder="groupOID groupName">
     <Attribute name="oid" id="groupOID" type="integer" key="true"/>
     <Attribute name="groupName" id="groupName" type="string"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="472" gr:y="167" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="470" gr:y="35" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
     <Attribute name="oid" id="moduleOID" type="integer" key="true"/>
     <Attribute name="moduleID" id="moduleID" type="string"/>
     <Attribute name="moduleName" id="moduleName" type="string"/>
@@ -29,5 +29,100 @@
   <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41">
     <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
     <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="920" gr:y="215" id="ent1" name="Task" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
+    <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
+    <Attribute id="ent1#att6" name="Expiration" type="timestamp"/>
+    <Attribute id="ent1#att5" name="ExecutionTime" type="time"/>
+    <Attribute id="ent1#att4" name="Reward" type="integer"/>
+    <Attribute id="ent1#att3" name="Description" type="string"/>
+    <Attribute id="ent1#att2" name="Title" type="string"/>
+  </Entity>
+  <Entity gr:x="35" gr:y="410" id="ent2" name="Skills" duration="persistent" attributeOrder="ent2#att7 ent2#att28">
+    <Attribute id="ent2#att7" key="true" name="oid" type="integer"/>
+    <Attribute id="ent2#att28" name="Name" type="string"/>
+  </Entity>
+  <Entity gr:x="940" gr:y="30" id="ent3" name="Item" duration="persistent" attributeOrder="ent3#att8 ent3#att9 ent3#att10 ent3#att11">
+    <Attribute id="ent3#att8" key="true" name="oid" type="integer"/>
+    <Attribute id="ent3#att11" name="URL" type="string"/>
+    <Attribute id="ent3#att10" name="Caption" type="string"/>
+    <Attribute id="ent3#att9" name="Title" type="string"/>
+  </Entity>
+  <Relationship id="rel1" name="Item_Task" sourceEntity="ent3" targetEntity="ent1">
+    <RelationshipRole1 id="rel1#role1" name="ItemToTask" maxCard="N"/>
+    <RelationshipRole2 id="rel1#role2" name="TaskToItem" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="10" gr:y="225" id="ent4" name="Worker" duration="persistent" attributeOrder="ent4#att13 ent4#att14 ent4#att15">
+    <Attribute id="ent4#att15" name="AccuracyScore" type="integer"/>
+    <Attribute id="ent4#att14" name="BirthDate" type="date"/>
+    <Attribute id="ent4#att13" name="Name" type="string"/>
+    <Generalization superEntity="User"/>
+  </Entity>
+  <Relationship id="rel2" name="Worker_Skills" sourceEntity="ent4" targetEntity="ent2">
+    <RelationshipRole1 id="rel2#role3" name="WorkerToSkills" maxCard="N"/>
+    <RelationshipRole2 id="rel2#role4" name="SkillsToWorker" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="220" gr:y="415" id="ent5" name="PiggyBank" duration="persistent" attributeOrder="ent5#att16 ent5#att25">
+    <Attribute id="ent5#att16" key="true" name="oid" type="integer"/>
+    <Attribute id="ent5#att25" name="Balance" type="integer"/>
+  </Entity>
+  <Relationship id="rel3" name="Worker_PiggyBank" sourceEntity="ent4" targetEntity="ent5">
+    <RelationshipRole1 id="rel3#role5" name="WorkerToPiggyBank" maxCard="1"/>
+    <RelationshipRole2 id="rel3#role6" name="PiggyBankToWorker" maxCard="1"/>
+  </Relationship>
+  <Relationship id="rel4" name="Worker_Task" sourceEntity="ent4" targetEntity="ent1">
+    <RelationshipRole1 id="rel4#role7" name="WorkerToTask" maxCard="N"/>
+    <RelationshipRole2 id="rel4#role8" name="TaskToWorker" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="565" gr:y="160" id="ent6" name="Annotation" duration="persistent" attributeOrder="ent6#att17 ent6#att18 ent6#att19">
+    <Attribute id="ent6#att17" key="true" name="oid" type="integer"/>
+    <Attribute id="ent6#att19" name="Confidence" type="integer"/>
+    <Attribute id="ent6#att18" name="Label" type="string"/>
+  </Entity>
+  <Relationship id="rel6" name="Item_Annotation" sourceEntity="ent3" targetEntity="ent6">
+    <RelationshipRole1 id="rel6#role11" name="ItemToAnnotation" maxCard="1"/>
+    <RelationshipRole2 id="rel6#role12" name="AnnotationToItem" maxCard="N"/>
+  </Relationship>
+  <Relationship id="rel7" name="Worker_Annotation" sourceEntity="ent4" targetEntity="ent6">
+    <RelationshipRole1 id="rel7#role13" name="WorkerToAnnotation" maxCard="1"/>
+    <RelationshipRole2 id="rel7#role14" name="AnnotationToWorker" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="930" gr:y="425" id="ent7" name="AnnotationCampain" duration="persistent" attributeOrder="ent7#att20 ent7#att21 ent7#att22 ent7#att23">
+    <Attribute id="ent7#att20" key="true" name="oid" type="integer"/>
+    <Attribute id="ent7#att21" name="Name" type="string" key="false"/>
+    <Attribute id="ent7#att23" name="Status" type="boolean"/>
+    <Attribute id="ent7#att22" name="Budget" type="integer"/>
+  </Entity>
+  <Relationship id="rel8" name="AnnotationCampain_Task" sourceEntity="ent7" targetEntity="ent1">
+    <RelationshipRole1 id="rel8#role15" name="AnnotationCampainToTask" maxCard="1"/>
+    <RelationshipRole2 id="rel8#role16" name="TaskToAnnotationCampain" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="475" gr:y="455" id="ent8" name="Requester" duration="persistent" attributeOrder="ent8#att31">
+    <Generalization superEntity="User"/>
+    <Attribute id="ent8#att31" name="Name" type="string" key="false"/>
+  </Entity>
+  <Relationship id="rel9" name="Requester_AnnotationCampain" sourceEntity="ent8" targetEntity="ent7">
+    <RelationshipRole1 id="rel9#role17" name="RequesterToAnnotationCampain" maxCard="1"/>
+    <RelationshipRole2 id="rel9#role18" name="AnnotationCampainToRequester" maxCard="N"/>
+  </Relationship>
+  <Relationship id="rel12" name="Annotation_Task" sourceEntity="ent6" targetEntity="ent1">
+    <RelationshipRole1 id="rel12#role23" name="AnnotationToTask" maxCard="N"/>
+    <RelationshipRole2 id="rel12#role24" name="TaskToAnnotation" maxCard="1"/>
+  </Relationship>
+  <Relationship id="rel14" name="AnnotationCampain_Item" sourceEntity="ent7" targetEntity="ent3" gr:bendpoints="159,-189,159,206">
+    <RelationshipRole1 id="rel14#role27" name="AnnotationCampainToItem" maxCard="1"/>
+    <RelationshipRole2 id="rel14#role28" name="ItemToAnnotationCampain" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="565" gr:y="315" id="ent10" name="WorkerTaskStatus" duration="persistent" attributeOrder="ent10#att29 ent10#att30">
+    <Attribute id="ent10#att29" key="true" name="oid" type="integer"/>
+    <Attribute id="ent10#att30" name="rewarded" type="boolean"/>
+  </Entity>
+  <Relationship id="rel15" name="Worker_WorkerTaskStatus" sourceEntity="ent4" targetEntity="ent10">
+    <RelationshipRole1 id="rel15#role29" name="WorkerToWorkerTaskStatus" maxCard="1"/>
+    <RelationshipRole2 id="rel15#role30" name="WorkerTaskStatusToWorker" maxCard="N"/>
+  </Relationship>
+  <Relationship id="rel16" name="WorkerTaskStatus_Task" sourceEntity="ent10" targetEntity="ent1">
+    <RelationshipRole1 id="rel16#role31" name="WorkerTaskStatusToTask" maxCard="N"/>
+    <RelationshipRole2 id="rel16#role32" name="TaskToWorkerTaskStatus" maxCard="1"/>
   </Relationship>
 </DataModel>
