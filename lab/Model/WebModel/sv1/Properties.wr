@@ -24,5 +24,13 @@
         <LinkParameter id="sv1#cru3#oln5#par35" name="password_PASSING_Password" sourceLinkParameter="sv1#cru2#oln4#par32" target="sv1#lgu1.password"/>
       </OKLink>
     </CreateUnit>
+    <ConnectUnit gr:x="710" gr:y="420" id="sv1#cnu3" name="Connect3">
+      <SourceSelector id="sv1#cnu3#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#cnu3#su8#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#cnu3#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#cnu3#su9#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
   </OperationUnits>
 </SiteView>
