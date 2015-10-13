@@ -1,0 +1,85 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="125" id="sv1#area1#page15" name="AddCampaign" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page15#enu7" name="addCampaign" linkOrder="sv1#area1#page15#enu7#ln10 sv1#area1#page15#enu7#ln25" fieldOrder="sv1#area1#page15#enu7#fld22 sv1#area1#page15#enu7#fld23">
+      <Link id="sv1#area1#page15#enu7#ln10" name="Create Campaign" to="sv1#area1#cru4" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page15#enu7#ln10#par36" name="Budget_Budget" source="sv1#area1#page15#enu7#fld23" target="sv1#area1#cru4.ent7#att22"/>
+        <LinkParameter id="sv1#area1#page15#enu7#ln10#par37" name="Name_Name" source="sv1#area1#page15#enu7#fld22" target="sv1#area1#cru4.ent7#att21"/>
+        <LinkParameter id="sv1#area1#page15#enu7#ln10#par38" name="false_Status" sourceValue="false" target="sv1#area1#cru4.ent7#att23"/>
+        <LinkParameter id="sv1#area1#page15#enu7#ln10#par49" name="UserCtxParam.oid_PASSING_Requester.oid(AnnotationCampainToRequester)" sourceLinkParameter="sv1#area1#page15#gtu2#ln24#par48" target="sv1#area1#cru4.rel9#role18.userOID"/>
+        <LinkParameter id="sv1#area1#page15#enu7#ln10#par50" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#area1#page15#gtu2#ln24#par48" passing="true"/>
+      </Link>
+      <Field id="sv1#area1#page15#enu7#fld23" name="Budget" type="float" modifiable="true"/>
+      <Field id="sv1#area1#page15#enu7#fld22" name="Name" type="string" modifiable="true"/>
+      <Link id="sv1#area1#page15#enu7#ln25" name="Flow25" to="sv1#area1#page15#dau3" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page15#enu7#ln25#par51" name="UserCtxParam.oid_PASSING_KeyCondition3 [oid]" sourceLinkParameter="sv1#area1#page15#gtu2#ln24#par48" target="sv1#area1#page15#dau3#su3#kcond3.userOID"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="5" gr:y="225" id="sv1#area1#page15#gtu2" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv1#area1#page15#gtu2#ln24" name="Flow24" to="sv1#area1#page15#enu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page15#gtu2#ln24#par48" name="UserCtxParam.oid_PASSING" source="sv1#area1#page15#gtu2.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="130" gr:y="135" id="sv1#area1#page15#dau3" name="Details3" entity="User" displayAll="true">
+      <Selector id="sv1#area1#page15#dau3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#page15#dau3#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page15#enu7">
+          <layout:Field field="sv1#area1#page15#enu7#fld22"/>
+          <layout:Field field="sv1#area1#page15#enu7#fld23"/>
+          <layout:Link link="sv1#area1#page15#enu7#ln10"/>
+          <layout:Link link="sv1#area1#page15#enu7#ln25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page15#dau3">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

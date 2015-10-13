@@ -1,8 +1,10 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="45" gr:y="310" id="sv1#page10" name="Home">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="65" gr:y="725" id="sv1#page10" name="Home">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page10#mssu8" name="homemsg" linkOrder="sv1#page10#mssu8#ln4">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page10#mssu8" name="homemsg" linkOrder="sv1#page10#mssu8#ln4 sv1#page10#mssu8#ln16 sv1#page10#mssu8#ln17">
       <Message xml:space="preserve">Welcome to the website! please login and register</Message>
-      <Link id="sv1#page10#mssu8#ln4" name="Flow4" to="sv1#page1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page10#mssu8#ln4" name="Login" to="sv1#page1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page10#mssu8#ln16" name="Register as Worker" to="sv1#page14" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page10#mssu8#ln17" name="Register as Requester" to="sv1#page11" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -10,6 +12,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#mssu8">
           <layout:Link link="sv1#page10#mssu8#ln4"/>
+          <layout:Link link="sv1#page10#mssu8#ln16"/>
+          <layout:Link link="sv1#page10#mssu8#ln17"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

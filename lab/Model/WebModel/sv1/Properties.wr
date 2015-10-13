@@ -1,15 +1,28 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="User" homePage="sv1#page11" landmarks="sv1#area1 sv1#area2">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="User" homePage="sv1#page10" landmarks="sv1#area1 sv1#area2">
   <OperationUnits>
-    <LoginUnit gr:x="445" gr:y="455" id="sv1#lgu1" name="login">
+    <LoginUnit gr:x="330" gr:y="920" id="sv1#lgu1" name="login">
       <KOLink id="sv1#lgu1#kln2" name="KOFlow2" to="sv1#page1" automaticCoupling="true"/>
     </LoginUnit>
-    <SwitchUnit gr:x="965" gr:y="320" id="sv1#switch1" name="Switch1"/>
-    <CreateUnit gr:x="760" gr:y="265" id="sv1#cru1" name="CreateRequester" entity="ent8">
+    <CreateUnit gr:x="305" gr:y="745" id="sv1#cru1" name="CreateRequester" entity="ent8">
       <OKLink id="sv1#cru1#oln3" name="OKFlow3" to="sv1#lgu1">
         <LinkParameter id="sv1#cru1#oln3#par12" name="username_PASSING_Username" sourceLinkParameter="sv1#page11#enu3#ln7#par6" target="sv1#lgu1.username"/>
         <LinkParameter id="sv1#cru1#oln3#par13" name="password_PASSING_Password" sourceLinkParameter="sv1#page11#enu3#ln7#par5" target="sv1#lgu1.password"/>
       </OKLink>
       <KOLink id="sv1#cru1#kln3" name="KOFlow3" to="sv1#page11" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="315" gr:y="1035" id="sv1#cru2" name="CreateWorker" entity="ent4">
+      <OKLink id="sv1#cru2#oln4" name="OKFlow4" to="sv1#cru3">
+        <LinkParameter id="sv1#cru2#oln4#par30" name="0_Balance" sourceValue="0" target="sv1#cru3.ent5#att25"/>
+        <LinkParameter id="sv1#cru2#oln4#par31" name="oid_Worker.oid(PiggyBankToWorker)" source="userOIDArray" target="sv1#cru3.rel3#role6.userOID"/>
+        <LinkParameter id="sv1#cru2#oln4#par32" name="password_PASSING" source="passwordArray" passing="true"/>
+        <LinkParameter id="sv1#cru2#oln4#par33" name="userName_PASSING" source="userNameArray" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="535" gr:y="1075" id="sv1#cru3" name="CreatePiggyBank" entity="ent5">
+      <OKLink id="sv1#cru3#oln5" name="OKFlow5" to="sv1#lgu1">
+        <LinkParameter id="sv1#cru3#oln5#par34" name="userName_PASSING_Username" sourceLinkParameter="sv1#cru2#oln4#par33" target="sv1#lgu1.username"/>
+        <LinkParameter id="sv1#cru3#oln5#par35" name="password_PASSING_Password" sourceLinkParameter="sv1#cru2#oln4#par32" target="sv1#lgu1.password"/>
+      </OKLink>
     </CreateUnit>
   </OperationUnits>
 </SiteView>

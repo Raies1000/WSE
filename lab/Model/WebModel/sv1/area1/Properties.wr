@@ -1,3 +1,8 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="5" id="sv1#area1" name="RequesterArea" landmark="true" defaultPage="sv1#area1#page6" protected="false" landmarks="sv1#area1#page9 sv1#area1#page6">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="5" id="sv1#area1" name="RequesterArea" landmark="true" defaultPage="sv1#area1#page6" protected="true" landmarks="sv1#area1#page9 sv1#area1#page6 sv1#area1#page15">
+  <OperationUnits>
+    <CreateUnit gr:x="350" gr:y="145" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
+      <OKLink id="sv1#area1#cru4#oln6" name="OKFlow6" to="sv1#area1#page6" automaticCoupling="true"/>
+      <KOLink id="sv1#area1#cru4#kln4" name="KOFlow4" to="sv1#area1#page15" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
 </Area>
