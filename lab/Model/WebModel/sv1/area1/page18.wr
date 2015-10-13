@@ -1,31 +1,114 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="380" gr:y="0" id="sv1#area1#page18" name="AddTask">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="405" gr:y="0" id="sv1#area1#page18" name="AddTask">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page18#enu9" name="AddTask" fieldOrder="sv1#area1#page18#enu9#fld27 sv1#area1#page18#enu9#fld28 sv1#area1#page18#enu9#fld29 sv1#area1#page18#enu9#fld30 sv1#area1#page18#enu9#fld31" linkOrder="sv1#area1#page18#enu9#ln39">
+    <EntryUnit gr:x="15" gr:y="85" id="sv1#area1#page18#enu9" name="AddTask" fieldOrder="sv1#area1#page18#enu9#fld27 sv1#area1#page18#enu9#fld28 sv1#area1#page18#enu9#fld29 sv1#area1#page18#enu9#fld30 sv1#area1#page18#enu9#fld31" linkOrder="sv1#area1#page18#enu9#ln60">
       <Field id="sv1#area1#page18#enu9#fld31" name="Expiration" type="timestamp" modifiable="true"/>
       <Field id="sv1#area1#page18#enu9#fld30" name="Execution Time" type="time" modifiable="true"/>
       <Field id="sv1#area1#page18#enu9#fld29" name="Reward" type="float" modifiable="true"/>
       <Field id="sv1#area1#page18#enu9#fld28" name="Description" type="string" modifiable="true"/>
       <Field id="sv1#area1#page18#enu9#fld27" name="Title" type="string" modifiable="true"/>
-      <Link id="sv1#area1#page18#enu9#ln39" name="Create Task" to="sv1#area1#cru6" type="normal" validate="true">
-        <LinkParameter id="sv1#area1#page18#enu9#ln39#par65" name="oid_campaign_PASSING_AnnotationCampaign.oid_campaign(TaskToAnnotationCampain)" sourceLinkParameter="sv1#area1#page6#inu1#ln38#par64" target="sv1#area1#cru6.rel8#role16.ent7#att20"/>
-        <LinkParameter id="sv1#area1#page18#enu9#ln39#par66" name="Description_Description" source="sv1#area1#page18#enu9#fld28" target="sv1#area1#cru6.ent1#att3"/>
-        <LinkParameter id="sv1#area1#page18#enu9#ln39#par67" name="Execution Time_ExecutionTime" source="sv1#area1#page18#enu9#fld30" target="sv1#area1#cru6.ent1#att5"/>
-        <LinkParameter id="sv1#area1#page18#enu9#ln39#par68" name="Expiration_Expiration" source="sv1#area1#page18#enu9#fld31" target="sv1#area1#cru6.ent1#att6"/>
-        <LinkParameter id="sv1#area1#page18#enu9#ln39#par69" name="Reward_Reward" source="sv1#area1#page18#enu9#fld29" target="sv1#area1#cru6.ent1#att4"/>
-        <LinkParameter id="sv1#area1#page18#enu9#ln39#par70" name="Title_Title" source="sv1#area1#page18#enu9#fld27" target="sv1#area1#cru6.ent1#att2"/>
+      <Link id="sv1#area1#page18#enu9#ln60" name="Continue" to="sv1#area1#cru8" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par132" name="oid_campaign_PASSING_AnnotationCampaign.oid_campaign(TaskToAnnotationCampain)" sourceLinkParameter="sv1#area1#page6#inu1#ln38#par64" target="sv1#area1#cru8.rel8#role16.ent7#att20"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par133" name="Description_Description" source="sv1#area1#page18#enu9#fld28" target="sv1#area1#cru8.ent1#att3"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par134" name="Execution Time_ExecutionTime" source="sv1#area1#page18#enu9#fld30" target="sv1#area1#cru8.ent1#att5"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par135" name="Expiration_Expiration" source="sv1#area1#page18#enu9#fld31" target="sv1#area1#cru8.ent1#att6"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par136" name="Reward_Reward" source="sv1#area1#page18#enu9#fld29" target="sv1#area1#cru8.ent1#att4"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par137" name="Title_Title" source="sv1#area1#page18#enu9#fld27" target="sv1#area1#cru8.ent1#att2"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par138" name="oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page6#inu1#ln38#par64" passing="true"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par143" name="Minimum Accuracy Required_PASSING" source="sv1#area1#page18#enu9#fld32" passing="true"/>
       </Link>
     </EntryUnit>
+    <MultiChoiceIndexUnit id="sv1#area1#page18#mciu3" name="Items" gr:x="0" gr:y="210" entity="ent3" displayAttributes="ent3#att9 ent3#att10" linkOrder="sv1#area1#page18#mciu3#ln58">
+      <Selector id="sv1#area1#page18#mciu3#su23" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area1#page18#mciu3#su23#acond4" name="oid_campaign" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.ent7#att20"/>
+      </Selector>
+      <Link id="sv1#area1#page18#mciu3#ln58" name="Create Task" to="sv1#area1#cnu5" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page18#mciu3#ln58#par115" name="Checked oid_item_KeyCondition16 [oid_item] [Item] [Source]" source="ent3#att8Checked" target="sv1#area1#cnu5#su24#kcond18.ent3#att8"/>
+        <LinkParameter id="sv1#area1#page18#mciu3#ln58#par142" name="oid_task_PASSING_KeyCondition17 [oid_task] [Task] [Target]" sourceLinkParameter="sv1#area1#cru8#oln22#par141" target="sv1#area1#cnu5#su25#kcond19.ent1#att1"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+    <MultiMessageUnit gr:x="10" gr:y="0" id="sv1#area1#page18#mssu10" name="itemmsg">
+      <Message xml:space="preserve">Fill in the task details and then proceed to select the items to include.
+The items must have already been created at the home page.</Message>
+    </MultiMessageUnit>
+    <IndexUnit gr:x="0" gr:y="325" id="sv1#area1#page18#inu3" name="Workers" entity="ent4" displayAttributes="userName ent4#att13 ent4#att14 ent4#att15" linkOrder="sv1#area1#page18#inu3#ln61">
+      <Link id="sv1#area1#page18#inu3#ln61" name="Assign to task" to="sv1#area1#cnu6" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page18#inu3#ln61#par148" name="Target oid_task [Task]_PASSING_KeyCondition20 [oid_task] [Task] [Source]" sourceLinkParameter="sv1#area1#cnu5#oln23#par147" target="sv1#area1#cnu6#su28#kcond20.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page18#inu3#ln61#par149" name="Target oid_task [Task]_PASSING_KeyCondition21 [oid] [Worker] [Target]" target="sv1#area1#cnu6#su29#kcond21.userOID" source="data[].userOID"/>
+      </Link>
+      <SortAttribute attribute="ent4#att15" order="descending"/>
+      <Selector id="sv1#area1#page18#inu3#su31" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area1#page18#inu3#su31#acond8" name="AttCondition8" predicate="gteq" booleanOperator="or" implied="false" attributes="ent4#att15"/>
+      </Selector>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page18#mssu10"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page18#enu9">
+          <layout:Link link="sv1#area1#page18#enu9#ln60"/>
           <layout:Field field="sv1#area1#page18#enu9#fld27"/>
           <layout:Field field="sv1#area1#page18#enu9#fld28"/>
           <layout:Field field="sv1#area1#page18#enu9#fld29"/>
           <layout:Field field="sv1#area1#page18#enu9#fld30"/>
           <layout:Field field="sv1#area1#page18#enu9#fld31"/>
-          <layout:Link link="sv1#area1#page18#enu9#ln39"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page18#mciu3">
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Link link="sv1#area1#page18#mciu3#ln58"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page18#inu3">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="ent4#att13"/>
+          <layout:Attribute attribute="ent4#att14"/>
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Link link="sv1#area1#page18#inu3#ln61"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

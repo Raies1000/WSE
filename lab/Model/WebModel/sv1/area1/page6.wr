@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="40" id="sv1#area1#page6" name="RequesterHome" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="25" gr:y="0" id="sv1#area1#page6" name="RequesterHome" landmark="true">
   <ContentUnits>
     <MultiMessageUnit gr:x="5" gr:y="5" id="sv1#area1#page6#mssu6" name="homemsg">
       <Message xml:space="preserve">requester's home</Message>
@@ -10,7 +10,7 @@
       <Link id="sv1#area1#page6#inu1#ln36" name="Add Item" to="sv1#area1#page17#enu8" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page6#inu1#ln36#par58" name="oid_campaign_PASSING" source="data[].ent7#att20" passing="true"/>
       </Link>
-      <Link id="sv1#area1#page6#inu1#ln38" name="Add Task" to="sv1#area1#page18#enu9" type="normal" validate="true">
+      <Link id="sv1#area1#page6#inu1#ln38" name="Add Task" to="sv1#area1#page18#enu9" type="normal" validate="true" gr:bendpoints="303,-129,-227,81">
         <LinkParameter id="sv1#area1#page6#inu1#ln38#par64" name="oid_campaign_PASSING" source="data[].ent7#att20" passing="true"/>
       </Link>
       <Link id="sv1#area1#page6#inu1#ln40" name="View Campaign" to="sv1#area1#page19#inu2" type="normal" validate="true">

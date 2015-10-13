@@ -1,22 +1,39 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-20" gr:y="-80" id="sv1#area1" name="RequesterArea" landmark="true" defaultPage="sv1#area1#page6" protected="true" landmarks="sv1#area1#page6 sv1#area1#page15">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-10" gr:y="-125" id="sv1#area1" name="RequesterArea" landmark="true" protected="true" landmarks="sv1#area1#page6 sv1#area1#page15" defaultPage="sv1#area1#page6">
   <OperationUnits>
-    <CreateUnit gr:x="245" gr:y="695" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
+    <CreateUnit gr:x="245" gr:y="740" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
       <OKLink id="sv1#area1#cru4#oln6" name="OKFlow6" to="sv1#area1#page6" automaticCoupling="true"/>
       <KOLink id="sv1#area1#cru4#kln4" name="KOFlow4" to="sv1#area1#page15" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="555" gr:y="530" id="sv1#area1#cru5" name="CreateItem" entity="ent3">
+    <CreateUnit gr:x="505" gr:y="620" id="sv1#area1#cru5" name="CreateItem" entity="ent3">
       <OKLink id="sv1#area1#cru5#oln7" name="OKFlow7" to="sv1#area1#page6" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="545" gr:y="85" id="sv1#area1#cru6" name="CreateTask" entity="ent1">
-      <OKLink id="sv1#area1#cru6#oln8" name="OKFlow8" to="sv1#area1#page6" automaticCoupling="true"/>
-    </CreateUnit>
-    <ConnectUnit gr:x="765" gr:y="690" id="sv1#area1#cnu4" name="Add Items to Task" relationship="rel1#role1">
-      <SourceSelector id="sv1#area1#cnu4#su20" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#area1#cnu4#su20#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+    <ConnectUnit id="sv1#area1#cnu5" name="Add Items to Task" gr:x="775" gr:y="270" relationship="rel1#role1">
+      <SourceSelector id="sv1#area1#cnu5#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu5#su24#kcond18" name="KeyCondition16" predicate="in" implied="false"/>
       </SourceSelector>
-      <TargetSelector id="sv1#area1#cnu4#su21" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#area1#cnu4#su21#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      <TargetSelector id="sv1#area1#cnu5#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu5#su25#kcond19" name="KeyCondition17" predicate="in" implied="false"/>
       </TargetSelector>
+      <OKLink id="sv1#area1#cnu5#oln23" name="OKFlow23" to="sv1#area1#page18#inu3">
+        <LinkParameter id="sv1#area1#cnu5#oln23#par147" name="Target oid_task [Task]_PASSING" source="targetent1#att1" passing="true"/>
+        <LinkParameter id="sv1#area1#cnu5#oln23#par150" name="Target oid_task [Task]_AttCondition8" target="sv1#area1#page18#inu3#su31#acond8" sourceValue="0"/>
+      </OKLink>
+    </ConnectUnit>
+    <CreateUnit gr:x="780" gr:y="135" id="sv1#area1#cru8" name="Create Task" entity="ent1">
+      <OKLink id="sv1#area1#cru8#oln22" name="OKFlow22" to="sv1#area1#page18#mciu3">
+        <LinkParameter id="sv1#area1#cru8#oln22#par139" name="oid_campaign_PASSING_oid_campaign" sourceLinkParameter="sv1#area1#page18#enu9#ln60#par138" target="sv1#area1#page18#mciu3#su23#acond4"/>
+        <LinkParameter id="sv1#area1#cru8#oln22#par140" name="oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page18#enu9#ln60#par138" passing="true"/>
+        <LinkParameter id="sv1#area1#cru8#oln22#par141" name="oid_task_PASSING" source="ent1#att1Array" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <ConnectUnit gr:x="775" gr:y="415" id="sv1#area1#cnu6" name="Connect Task to Worker" relationship="rel4#role8">
+      <SourceSelector id="sv1#area1#cnu6#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu6#su28#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#cnu6#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu6#su29#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area1#cnu6#oln24" name="OKFlow24" to="sv1#area1#page6" automaticCoupling="true" gr:bendpoints="161,-103,851,222;81,-477,771,-152;-475,-480,215,-155"/>
     </ConnectUnit>
   </OperationUnits>
 </Area>
