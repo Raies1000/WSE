@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="700" gr:y="445" id="sv1#area1#page20" name="Edit Task">
+  <ContentUnits>
+    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page20#mciu2" name="Items" entity="ent3" displayAttributes="ent3#att9 ent3#att10" linkOrder="sv1#area1#page20#mciu2#ln44">
+      <Selector id="sv1#area1#page20#mciu2#su19" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area1#page20#mciu2#su19#acond3" name="oid_campaign" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.ent7#att20"/>
+      </Selector>
+      <Link id="sv1#area1#page20#mciu2#ln44" name="Add Items to task operation" to="sv1#area1#cnu4" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page20#mciu2#ln44#par75" name="Checked oid_item_KeyCondition16 [oid_item] [Item] [Source]" source="ent3#att8Checked" target="sv1#area1#cnu4#su20#kcond16.ent3#att8"/>
+        <LinkParameter id="sv1#area1#page20#mciu2#ln44#par76" name="oid_task_PASSING_KeyCondition17 [oid_task] [Task] [Target]" sourceLinkParameter="sv1#area1#page19#inu2#ln43#par74" target="sv1#area1#cnu4#su21#kcond17.ent1#att1"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page20#mciu2">
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Link link="sv1#area1#page20#mciu2#ln44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

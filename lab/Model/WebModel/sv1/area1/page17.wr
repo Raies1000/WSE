@@ -1,11 +1,26 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="440" gr:y="130" id="sv1#area1#page17" name="AddItems">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="370" gr:y="550" id="sv1#area1#page17" name="AddItems">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page17#enu8" name="addItems"/>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page17#enu8" name="addItems" fieldOrder="sv1#area1#page17#enu8#fld24 sv1#area1#page17#enu8#fld25 sv1#area1#page17#enu8#fld26" linkOrder="sv1#area1#page17#enu8#ln37">
+      <Field id="sv1#area1#page17#enu8#fld26" name="URL" type="string" modifiable="true"/>
+      <Field id="sv1#area1#page17#enu8#fld25" name="Caption" type="string" modifiable="true"/>
+      <Field id="sv1#area1#page17#enu8#fld24" name="Title" type="string" modifiable="true"/>
+      <Link id="sv1#area1#page17#enu8#ln37" name="Create Item" to="sv1#area1#cru5" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page17#enu8#ln37#par60" name="Caption_Caption" source="sv1#area1#page17#enu8#fld25" target="sv1#area1#cru5.ent3#att10"/>
+        <LinkParameter id="sv1#area1#page17#enu8#ln37#par61" name="Title_Title" source="sv1#area1#page17#enu8#fld24" target="sv1#area1#cru5.ent3#att9"/>
+        <LinkParameter id="sv1#area1#page17#enu8#ln37#par62" name="URL_URL" source="sv1#area1#page17#enu8#fld26" target="sv1#area1#cru5.ent3#att11"/>
+        <LinkParameter id="sv1#area1#page17#enu8#ln37#par63" name="oid_campaign_PASSING_AnnotationCampaign.oid_campaign(ItemToAnnotationCampain)" sourceLinkParameter="sv1#area1#page6#inu1#ln36#par58" target="sv1#area1#cru5.rel14#role28.ent7#att20"/>
+      </Link>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page17#enu8"/>
+        <layout:Unit unitId="sv1#area1#page17#enu8">
+          <layout:Field field="sv1#area1#page17#enu8#fld24"/>
+          <layout:Field field="sv1#area1#page17#enu8#fld25"/>
+          <layout:Field field="sv1#area1#page17#enu8#fld26"/>
+          <layout:Link link="sv1#area1#page17#enu8#ln37"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

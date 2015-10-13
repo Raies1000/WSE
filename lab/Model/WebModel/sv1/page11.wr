@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="575" gr:y="735" id="sv1#page11" name="RegisterRequester">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="560" gr:y="900" id="sv1#page11" name="RegisterRequester">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page11#enu3" name="register" fieldOrder="sv1#page11#enu3#fld9 sv1#page11#enu3#fld10 sv1#page11#enu3#fld11 sv1#page11#enu3#fld12" linkOrder="sv1#page11#enu3#ln7">
       <Field id="sv1#page11#enu3#fld11" name="email" type="string" modifiable="true"/>

@@ -1,8 +1,22 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="5" id="sv1#area1" name="RequesterArea" landmark="true" defaultPage="sv1#area1#page6" protected="true" landmarks="sv1#area1#page9 sv1#area1#page6 sv1#area1#page15">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-20" gr:y="-80" id="sv1#area1" name="RequesterArea" landmark="true" defaultPage="sv1#area1#page6" protected="true" landmarks="sv1#area1#page6 sv1#area1#page15">
   <OperationUnits>
-    <CreateUnit gr:x="210" gr:y="155" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
+    <CreateUnit gr:x="245" gr:y="695" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
       <OKLink id="sv1#area1#cru4#oln6" name="OKFlow6" to="sv1#area1#page6" automaticCoupling="true"/>
       <KOLink id="sv1#area1#cru4#kln4" name="KOFlow4" to="sv1#area1#page15" automaticCoupling="true"/>
     </CreateUnit>
+    <CreateUnit gr:x="555" gr:y="530" id="sv1#area1#cru5" name="CreateItem" entity="ent3">
+      <OKLink id="sv1#area1#cru5#oln7" name="OKFlow7" to="sv1#area1#page6" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="545" gr:y="85" id="sv1#area1#cru6" name="CreateTask" entity="ent1">
+      <OKLink id="sv1#area1#cru6#oln8" name="OKFlow8" to="sv1#area1#page6" automaticCoupling="true"/>
+    </CreateUnit>
+    <ConnectUnit gr:x="765" gr:y="690" id="sv1#area1#cnu4" name="Add Items to Task" relationship="rel1#role1">
+      <SourceSelector id="sv1#area1#cnu4#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu4#su20#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#cnu4#su21" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu4#su21#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
   </OperationUnits>
 </Area>

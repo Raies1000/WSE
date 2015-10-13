@@ -1,14 +1,69 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page6" name="RequesterHome" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="40" id="sv1#area1#page6" name="RequesterHome" landmark="true">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area1#page6#mssu6" name="homemsg">
+    <MultiMessageUnit gr:x="5" gr:y="5" id="sv1#area1#page6#mssu6" name="homemsg">
       <Message xml:space="preserve">requester's home</Message>
     </MultiMessageUnit>
+    <IndexUnit gr:x="0" gr:y="150" id="sv1#area1#page6#inu1" name="Campaigns List" entity="ent7" displayAttributes="ent7#att21 ent7#att23" linkOrder="sv1#area1#page6#inu1#ln36 sv1#area1#page6#inu1#ln38 sv1#area1#page6#inu1#ln40">
+      <Selector id="sv1#area1#page6#inu1#su14" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area1#page6#inu1#su14#acond1" name="oid" predicate="eq" booleanOperator="or" implied="false" attributes="rel9#role18.userOID"/>
+      </Selector>
+      <Link id="sv1#area1#page6#inu1#ln36" name="Add Item" to="sv1#area1#page17#enu8" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page6#inu1#ln36#par58" name="oid_campaign_PASSING" source="data[].ent7#att20" passing="true"/>
+      </Link>
+      <Link id="sv1#area1#page6#inu1#ln38" name="Add Task" to="sv1#area1#page18#enu9" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page6#inu1#ln38#par64" name="oid_campaign_PASSING" source="data[].ent7#att20" passing="true"/>
+      </Link>
+      <Link id="sv1#area1#page6#inu1#ln40" name="View Campaign" to="sv1#area1#page19#inu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page6#inu1#ln40#par72" name="oid_campaign_oid_campaign" source="data[].ent7#att20" target="sv1#area1#page19#inu2#su15#acond2"/>
+      </Link>
+    </IndexUnit>
+    <GetUnit gr:x="130" gr:y="0" id="sv1#area1#page6#gtu3" name="Get3" contextParameters="UserCtxParam">
+      <Link id="sv1#area1#page6#gtu3#ln35" name="Flow35" to="sv1#area1#page6#inu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page6#gtu3#ln35#par57" name="UserCtxParam.oid_oid" source="sv1#area1#page6#gtu3.UserCtxParam" target="sv1#area1#page6#inu1#su14#acond1"/>
+      </Link>
+    </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page6#mssu6"/>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page6#inu1">
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Attribute attribute="ent7#att23"/>
+          <layout:Link link="sv1#area1#page6#inu1#ln36"/>
+          <layout:Link link="sv1#area1#page6#inu1#ln38"/>
+          <layout:Link link="sv1#area1#page6#inu1#ln40"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
