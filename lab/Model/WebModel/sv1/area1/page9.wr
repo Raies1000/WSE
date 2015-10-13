@@ -1,0 +1,50 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="230" gr:y="5" id="sv1#area1#page9" name="AddItem" localized="false" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="5" gr:y="0" id="sv1#area1#page9#enu2" name="ItemForm" fieldOrder="sv1#area1#page9#enu2#fld3 sv1#area1#page9#enu2#fld4 sv1#area1#page9#enu2#fld5 sv1#area1#page9#enu2#sfld1">
+      <Field id="sv1#area1#page9#enu2#fld5" name="Url" type="url" modifiable="true"/>
+      <Field id="sv1#area1#page9#enu2#fld4" name="Caption" type="string" modifiable="true"/>
+      <Field id="sv1#area1#page9#enu2#fld3" name="Title" type="string" modifiable="true"/>
+      <SelectionField id="sv1#area1#page9#enu2#sfld1" name="Group" type="string" modifiable="true" slotOrder="sv1#area1#page9#enu2#sfld1#slot1 sv1#area1#page9#enu2#sfld1#slot2" splitOutput="true">
+        <Slot id="sv1#area1#page9#enu2#sfld1#slot2" name="GroupOutput" value="1|2" output="true"/>
+        <Slot id="sv1#area1#page9#enu2#sfld1#slot1" name="GroupLabel" value="Worker|Requester" label="true"/>
+      </SelectionField>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page9#enu2">
+          <layout:Field field="sv1#area1#page9#enu2#fld3"/>
+          <layout:Field field="sv1#area1#page9#enu2#fld4"/>
+          <layout:Field field="sv1#area1#page9#enu2#fld5"/>
+          <layout:Field field="sv1#area1#page9#enu2#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

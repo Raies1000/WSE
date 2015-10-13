@@ -1,0 +1,15 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="User" homePage="sv1#page11" landmarks="sv1#area1 sv1#area2">
+  <OperationUnits>
+    <LoginUnit gr:x="445" gr:y="455" id="sv1#lgu1" name="login">
+      <KOLink id="sv1#lgu1#kln2" name="KOFlow2" to="sv1#page1" automaticCoupling="true"/>
+    </LoginUnit>
+    <SwitchUnit gr:x="965" gr:y="320" id="sv1#switch1" name="Switch1"/>
+    <CreateUnit gr:x="760" gr:y="265" id="sv1#cru1" name="CreateRequester" entity="ent8">
+      <OKLink id="sv1#cru1#oln3" name="OKFlow3" to="sv1#lgu1">
+        <LinkParameter id="sv1#cru1#oln3#par12" name="username_PASSING_Username" sourceLinkParameter="sv1#page11#enu3#ln7#par6" target="sv1#lgu1.username"/>
+        <LinkParameter id="sv1#cru1#oln3#par13" name="password_PASSING_Password" sourceLinkParameter="sv1#page11#enu3#ln7#par5" target="sv1#lgu1.password"/>
+      </OKLink>
+      <KOLink id="sv1#cru1#kln3" name="KOFlow3" to="sv1#page11" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</SiteView>
