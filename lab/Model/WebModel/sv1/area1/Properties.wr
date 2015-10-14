@@ -14,9 +14,9 @@
       <TargetSelector id="sv1#area1#cnu5#su25" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu5#su25#kcond19" name="KeyCondition17" predicate="in" implied="false"/>
       </TargetSelector>
-      <OKLink id="sv1#area1#cnu5#oln23" name="OKFlow23" to="sv1#area1#page18#inu3">
+      <OKLink id="sv1#area1#cnu5#oln23" name="OKFlow23" to="sv1#area1#page18#mciu4">
         <LinkParameter id="sv1#area1#cnu5#oln23#par147" name="Target oid_task [Task]_PASSING" source="targetent1#att1" passing="true"/>
-        <LinkParameter id="sv1#area1#cnu5#oln23#par150" name="Target oid_task [Task]_AttCondition8" target="sv1#area1#page18#inu3#su31#acond8" sourceValue="0"/>
+        <LinkParameter id="sv1#area1#cnu5#oln23#par152" name="0_AttCondition9" sourceValue="0" target="sv1#area1#page18#mciu4#su32#acond9"/>
       </OKLink>
     </ConnectUnit>
     <CreateUnit gr:x="780" gr:y="135" id="sv1#area1#cru8" name="Create Task" entity="ent1">
@@ -33,7 +33,14 @@
       <TargetSelector id="sv1#area1#cnu6#su29" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu6#su29#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
       </TargetSelector>
-      <OKLink id="sv1#area1#cnu6#oln24" name="OKFlow24" to="sv1#area1#page6" automaticCoupling="true" gr:bendpoints="161,-103,851,222;81,-477,771,-152;-475,-480,215,-155"/>
+      <OKLink id="sv1#area1#cnu6#oln25" name="OKFlow25" to="sv1#area1#cru10" gr:bendpoints="165,-99,0,191">
+        <LinkParameter id="sv1#area1#cnu6#oln25#par154" name="false_rewarded" sourceValue="false" target="sv1#area1#cru10.ent10#att30"/>
+        <LinkParameter id="sv1#area1#cnu6#oln25#par155" name="Source oid_task [Task]_Task.oid_task(WorkerTaskStatusToTask)" source="sourceent1#att1" target="sv1#area1#cru10.rel16#role31.ent1#att1"/>
+        <LinkParameter id="sv1#area1#cnu6#oln25#par156" name="Target oid [Worker]_Worker.oid(WorkerTaskStatusToWorker)" target="sv1#area1#cru10.rel15#role30.userOID" sourceLinkParameter="sv1#area1#page18#mciu4#ln62#par157"/>
+      </OKLink>
     </ConnectUnit>
+    <CreateUnit gr:x="935" gr:y="140" id="sv1#area1#cru10" name="Create WorkerTaskStatus" entity="ent10" bulk="true">
+      <OKLink id="sv1#area1#cru10#oln27" name="OKFlow27" to="sv1#area1#page6" automaticCoupling="true" gr:bendpoints="-282,-183,573,-148;-673,-183,182,-148"/>
+    </CreateUnit>
   </OperationUnits>
 </Area>

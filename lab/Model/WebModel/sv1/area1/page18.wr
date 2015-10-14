@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="405" gr:y="0" id="sv1#area1#page18" name="AddTask">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="405" gr:y="10" id="sv1#area1#page18" name="AddTask">
   <ContentUnits>
     <EntryUnit gr:x="15" gr:y="85" id="sv1#area1#page18#enu9" name="AddTask" fieldOrder="sv1#area1#page18#enu9#fld27 sv1#area1#page18#enu9#fld28 sv1#area1#page18#enu9#fld29 sv1#area1#page18#enu9#fld30 sv1#area1#page18#enu9#fld31" linkOrder="sv1#area1#page18#enu9#ln60">
       <Field id="sv1#area1#page18#enu9#fld31" name="Expiration" type="timestamp" modifiable="true"/>
@@ -26,20 +26,20 @@
         <LinkParameter id="sv1#area1#page18#mciu3#ln58#par142" name="oid_task_PASSING_KeyCondition17 [oid_task] [Task] [Target]" sourceLinkParameter="sv1#area1#cru8#oln22#par141" target="sv1#area1#cnu5#su25#kcond19.ent1#att1"/>
       </Link>
     </MultiChoiceIndexUnit>
-    <MultiMessageUnit gr:x="10" gr:y="0" id="sv1#area1#page18#mssu10" name="itemmsg">
-      <Message xml:space="preserve">Fill in the task details and then proceed to select the items to include.
+    <MultiMessageUnit gr:x="10" gr:y="0" id="sv1#area1#page18#mssu10" name="Important">
+      <Message xml:space="preserve">Fill in the task details and then proceed to select the items to include, then you can assign the workers.
 The items must have already been created at the home page.</Message>
     </MultiMessageUnit>
-    <IndexUnit gr:x="0" gr:y="325" id="sv1#area1#page18#inu3" name="Workers" entity="ent4" displayAttributes="userName ent4#att13 ent4#att14 ent4#att15" linkOrder="sv1#area1#page18#inu3#ln61">
-      <Link id="sv1#area1#page18#inu3#ln61" name="Assign to task" to="sv1#area1#cnu6" type="normal" validate="true">
-        <LinkParameter id="sv1#area1#page18#inu3#ln61#par148" name="Target oid_task [Task]_PASSING_KeyCondition20 [oid_task] [Task] [Source]" sourceLinkParameter="sv1#area1#cnu5#oln23#par147" target="sv1#area1#cnu6#su28#kcond20.ent1#att1"/>
-        <LinkParameter id="sv1#area1#page18#inu3#ln61#par149" name="Target oid_task [Task]_PASSING_KeyCondition21 [oid] [Worker] [Target]" target="sv1#area1#cnu6#su29#kcond21.userOID" source="data[].userOID"/>
+    <MultiChoiceIndexUnit gr:x="5" gr:y="345" id="sv1#area1#page18#mciu4" name="CheckableList4" linkOrder="sv1#area1#page18#mciu4#ln62" entity="ent4" displayAttributes="userName ent4#att13 ent4#att14 ent4#att15">
+      <Link id="sv1#area1#page18#mciu4#ln62" name="Assign to task" to="sv1#area1#cnu6" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page18#mciu4#ln62#par151" name="Target oid_task [Task]_PASSING_KeyCondition21 [oid] [Worker] [Target]" source="userOIDChecked" target="sv1#area1#cnu6#su29#kcond21.userOID"/>
+        <LinkParameter id="sv1#area1#page18#mciu4#ln62#par153" name="Target oid_task [Task]_PASSING_KeyCondition20 [oid_task] [Task] [Source]" sourceLinkParameter="sv1#area1#cnu5#oln23#par147" target="sv1#area1#cnu6#su28#kcond20.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page18#mciu4#ln62#par157" name="Checked oid_PASSING" source="userOIDChecked" passing="true"/>
       </Link>
-      <SortAttribute attribute="ent4#att15" order="descending"/>
-      <Selector id="sv1#area1#page18#inu3#su31" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#area1#page18#inu3#su31#acond8" name="AttCondition8" predicate="gteq" booleanOperator="or" implied="false" attributes="ent4#att15"/>
+      <Selector id="sv1#area1#page18#mciu4#su32" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area1#page18#mciu4#su32#acond9" name="AttCondition9" predicate="gteq" booleanOperator="or" implied="false" attributes="ent4#att15"/>
       </Selector>
-    </IndexUnit>
+    </MultiChoiceIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -102,13 +102,27 @@ The items must have already been created at the home page.</Message>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page18#inu3">
+        <layout:Unit unitId="sv1#area1#page18#mciu4">
+          <layout:Link link="sv1#area1#page18#mciu4#ln62"/>
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="ent4#att13"/>
           <layout:Attribute attribute="ent4#att14"/>
           <layout:Attribute attribute="ent4#att15"/>
-          <layout:Link link="sv1#area1#page18#inu3#ln61"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
