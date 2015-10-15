@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="680" gr:y="35" id="sv1#area2#page5" name="Add Skills">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="730" gr:y="35" id="sv1#area2#page5" name="Add Skills">
   <ContentUnits>
     <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area2#page5#mciu1" name="Skills" entity="ent2" linkOrder="sv1#area2#page5#mciu1#ln14" displayAttributes="ent2#att28">
       <Link id="sv1#area2#page5#mciu1#ln14" name="Add Skills" to="sv1#area2#cnu2" automaticCoupling="true" type="normal" validate="true"/>

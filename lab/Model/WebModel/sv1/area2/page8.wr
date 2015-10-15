@@ -1,9 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="365" gr:y="315" id="sv1#area2#page8" name="Items of Task">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="415" gr:y="315" id="sv1#area2#page8" name="Items of Task">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area2#page8#pwu2" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area2#page8#pwu2" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11" linkOrder="sv1#area2#page8#pwu2#ln5">
       <Selector id="sv1#area2#page8#pwu2#su17" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area2#page8#pwu2#su17#rcond6" name="Items Of Task" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
+      <Link id="sv1#area2#page8#pwu2#ln5" name="Add Annotation" to="sv1#area2#page9#enu4" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page8#pwu2#ln5#par16" name="oid_item_PASSING" source="data[].ent3#att8" passing="true"/>
+        <LinkParameter id="sv1#area2#page8#pwu2#ln5#par48" name="oid_task_PASSING" sourceLinkParameter="sv1#area2#page7#pwu1#ln21#par47" passing="true"/>
+      </Link>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -13,6 +17,7 @@
           <layout:Attribute attribute="ent3#att9"/>
           <layout:Attribute attribute="ent3#att10"/>
           <layout:Attribute attribute="ent3#att11"/>
+          <layout:Link link="sv1#area2#page8#pwu2#ln5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

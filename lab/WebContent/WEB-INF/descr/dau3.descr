@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="Details3">
+  <Query entity="User">
+    <Input id="p0" param="kcond3.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="oid" index="0"/>
+    <Output id="email" name="email" index="1"/>
+    <Output id="userName" name="userName" index="2"/>
+    <Output id="password" name="password" index="3"/>
+    <HQL>select a_user.oid, a_user.email, a_user.userName, a_user.password from User a_user
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_user.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

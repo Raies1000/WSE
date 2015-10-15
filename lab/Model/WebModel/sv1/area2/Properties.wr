@@ -1,20 +1,27 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1680" gr:y="-120" id="sv1#area2" name="WorkerArea" landmark="true" defaultPage="sv1#area2#page7" protected="true" landmarks="sv1#area2#page4">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1630" gr:y="-120" id="sv1#area2" name="WorkerArea" landmark="true" defaultPage="sv1#area2#page7" protected="true" landmarks="sv1#area2#page4">
   <OperationUnits>
-    <ConnectUnit gr:x="890" gr:y="145" id="sv1#area2#cnu2" name="Connect Skill to Worker" relationship="rel2#role4">
+    <ConnectUnit gr:x="940" gr:y="145" id="sv1#area2#cnu2" name="Connect Skill to Worker" relationship="rel2#role4">
       <SourceSelector id="sv1#area2#cnu2#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area2#cnu2#su8#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </SourceSelector>
       <TargetSelector id="sv1#area2#cnu2#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area2#cnu2#su9#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </TargetSelector>
-      <OKLink id="sv1#area2#cnu2#oln2" name="OKFlow2" to="sv1#area2#page4" automaticCoupling="true" gr:bendpoints="-113,-207,392,-192;-504,-208,1,-193"/>
+      <OKLink id="sv1#area2#cnu2#oln2" name="OKFlow2" to="sv1#area2#page4" automaticCoupling="true" gr:bendpoints="-113,-207,392,-192;-478,-206,-3,-191"/>
       <KOLink id="sv1#area2#cnu2#kln5" name="KOFlow5" to="sv1#area2#page5" automaticCoupling="true"/>
     </ConnectUnit>
-    <GetUnit gr:x="915" gr:y="0" id="sv1#area2#gtu5" name="GetuserID" contextParameters="UserCtxParam" linkOrder="sv1#area2#gtu5#ln13">
+    <GetUnit gr:x="965" gr:y="0" id="sv1#area2#gtu5" name="GetuserID" contextParameters="UserCtxParam" linkOrder="sv1#area2#gtu5#ln13">
       <Link id="sv1#area2#gtu5#ln13" name="Flow13" to="sv1#area2#cnu2" type="transport" validate="true">
         <LinkParameter id="sv1#area2#gtu5#ln13#par18" name="UserCtxParam.oid_PASSING" source="sv1#area2#gtu5.UserCtxParam" passing="true"/>
         <LinkParameter id="sv1#area2#gtu5#ln13#par20" name="UserCtxParam.oid_KeyCondition4 [oid] [Worker] [Target]" source="sv1#area2#gtu5.UserCtxParam" target="sv1#area2#cnu2#su9#kcond4.userOID"/>
       </Link>
     </GetUnit>
+    <CreateUnit id="sv1#area2#cru9" entity="ent6" gr:x="895" gr:y="440" name="Item Annotation" linkOrder="sv1#area2#cru9#ln27">
+      <OKLink id="sv1#area2#cru9#oln8" name="OKFlow8" to="sv1#area2#page8" automaticCoupling="true" gr:bendpoints="-1,-90,469,0"/>
+      <Link id="sv1#area2#cru9#ln27" name="Flow27" to="sv1#area2#page8#pwu2" type="transport" validate="true" gr:bendpoints="-1,-85,469,-5">
+        <LinkParameter id="sv1#area2#cru9#ln27#par51" name="oid_item_PASSING_current oid_item" sourceLinkParameter="sv1#area2#page9#enu4#ln24#par49" target="sv1#area2#page8#pwu2.current.ent3#att8"/>
+        <LinkParameter id="sv1#area2#cru9#ln27#par52" name="oid_task_PASSING_Items Of Task [oid_task]" sourceLinkParameter="sv1#area2#page9#enu4#ln24#par50" target="sv1#area2#page8#pwu2#su17#rcond6.ent1#att1"/>
+      </Link>
+    </CreateUnit>
   </OperationUnits>
 </Area>

@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="415" gr:y="550" id="sv1#area2#page16" name="Items of Task">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area2#page16#pwu4" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11" linkOrder="sv1#area2#page16#pwu4#ln46">
+      <Selector id="sv1#area2#page16#pwu4#su18" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area2#page16#pwu4#su18#rcond9" name="Items Of Task" predicate="in" implied="false" role="rel1#role2"/>
+      </Selector>
+      <Link id="sv1#area2#page16#pwu4#ln46" name="View Annotation" to="sv1#area2#page21#dau2" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page16#pwu4#ln46#par91" name="UserCtxParam.oid_PASSING_WorkerToAnnotation [oid]" sourceLinkParameter="sv1#area2#page7#pwu3#ln45#par90" target="sv1#area2#page21#dau2#su20#rcond10.userOID"/>
+        <LinkParameter id="sv1#area2#page16#pwu4#ln46#par93" name="oid_task_PASSING_TaskToAnnotation [oid_task]" sourceLinkParameter="sv1#area2#page7#pwu3#ln45#par92" target="sv1#area2#page21#dau2#su20#rcond11.ent1#att1"/>
+        <LinkParameter id="sv1#area2#page16#pwu4#ln46#par94" name="oid_item_ItemToAnnotation [oid_item]" source="data[].ent3#att8" target="sv1#area2#page21#dau2#su20#rcond12.ent3#att8"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page16#pwu4">
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Link link="sv1#area2#page16#pwu4#ln46"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
