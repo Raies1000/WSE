@@ -1,14 +1,60 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page7" name="WorkerHome">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="80" id="sv1#area2#page7" name="WorkerHome">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area2#page7#mssu7" name="homemsg">
+    <MultiMessageUnit gr:x="120" gr:y="0" id="sv1#area2#page7#mssu7" name="homemsg">
       <Message xml:space="preserve">worker's home</Message>
     </MultiMessageUnit>
+    <PowerIndexUnit gr:x="145" gr:y="85" id="sv1#area2#page7#pwu1" name="Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
+      <Selector id="sv1#area2#page7#pwu1#su13" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area2#page7#pwu1#su13#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel4#role7"/>
+      </Selector>
+    </PowerIndexUnit>
+    <GetUnit gr:x="0" gr:y="95" id="sv1#area2#page7#gtu7" name="GetUserID" contextParameters="UserCtxParam">
+      <Link id="sv1#area2#page7#gtu7#ln19" name="Flow19" to="sv1#area2#page7#pwu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#page7#gtu7#ln19#par41" name="UserCtxParam.oid_RoleCondition4 [oid]" source="sv1#area2#page7#gtu7.UserCtxParam" target="sv1#area2#page7#pwu1#su13#rcond4.userOID"/>
+      </Link>
+    </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area2#page7#mssu7"/>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page7#pwu1">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

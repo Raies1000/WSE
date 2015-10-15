@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="305" gr:y="110" id="sv1#area2#page4" name="My Skills" landmark="true" linkOrder="sv1#area2#page4#ln12">
+  <ContentUnits>
+    <IndexUnit gr:x="140" gr:y="0" id="sv1#area2#page4#inu6" name="My Skills" entity="ent2" displayAttributes="ent2#att28">
+      <Selector id="sv1#area2#page4#inu6#su12" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area2#page4#inu6#su12#acond10" name="Worker Skills" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role4.userOID"/>
+      </Selector>
+    </IndexUnit>
+    <GetUnit gr:x="0" gr:y="10" id="sv1#area2#page4#gtu6" name="GetUserID" contextParameters="UserCtxParam">
+      <Link id="sv1#area2#page4#gtu6#ln18" name="Flow18" to="sv1#area2#page4#inu6" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#page4#gtu6#ln18#par40" name="UserCtxParam.oid_Worker Skills" source="sv1#area2#page4#gtu6.UserCtxParam" target="sv1#area2#page4#inu6#su12#acond10"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page4#inu6">
+          <layout:Attribute attribute="ent2#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#area2#page4#ln12" name="Add Skills" to="sv1#area2#page5" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

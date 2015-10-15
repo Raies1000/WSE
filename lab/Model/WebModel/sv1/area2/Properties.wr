@@ -1,3 +1,20 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1730" gr:y="-35" id="sv1#area2" name="WorkerArea" landmark="true" defaultPage="sv1#area2#page7" protected="true">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1680" gr:y="-120" id="sv1#area2" name="WorkerArea" landmark="true" defaultPage="sv1#area2#page7" protected="true" landmarks="sv1#area2#page4">
+  <OperationUnits>
+    <ConnectUnit gr:x="890" gr:y="145" id="sv1#area2#cnu2" name="Connect Skill to Worker" relationship="rel2#role4">
+      <SourceSelector id="sv1#area2#cnu2#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#cnu2#su8#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area2#cnu2#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#cnu2#su9#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area2#cnu2#oln2" name="OKFlow2" to="sv1#area2#page4" automaticCoupling="true" gr:bendpoints="-113,-207,392,-192;-504,-208,1,-193"/>
+      <KOLink id="sv1#area2#cnu2#kln5" name="KOFlow5" to="sv1#area2#page5" automaticCoupling="true"/>
+    </ConnectUnit>
+    <GetUnit gr:x="915" gr:y="0" id="sv1#area2#gtu5" name="GetuserID" contextParameters="UserCtxParam" linkOrder="sv1#area2#gtu5#ln13">
+      <Link id="sv1#area2#gtu5#ln13" name="Flow13" to="sv1#area2#cnu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#gtu5#ln13#par18" name="UserCtxParam.oid_PASSING" source="sv1#area2#gtu5.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv1#area2#gtu5#ln13#par20" name="UserCtxParam.oid_KeyCondition4 [oid] [Worker] [Target]" source="sv1#area2#gtu5.UserCtxParam" target="sv1#area2#cnu2#su9#kcond4.userOID"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
 </Area>
