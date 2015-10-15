@@ -97,7 +97,7 @@
       <db:JoinColumn attribute="userOID" name="worker_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel3#role6" name="PiggyBankToWorker" maxCard="1">
-      <db:JoinColumn attribute="ent5#att16" name="oid"/>
+      <db:JoinColumn attribute="ent5#att16" name="oid_bank"/>
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel4" name="Worker_Task" sourceEntity="ent4" targetEntity="ent1" db:database="db2" db:table="worker_task">
@@ -118,7 +118,7 @@
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel7#role14" name="AnnotationToWorker" maxCard="1">
-      <db:JoinColumn attribute="ent6#att17" name="annotation_oid"/>
+      <db:JoinColumn attribute="ent6#att17" name="oid_annotation"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="920" gr:y="425" id="ent7" name="AnnotationCampaign" duration="persistent" attributeOrder="ent7#att20 ent7#att21 ent7#att22 ent7#att23" db:database="db2" db:table="annotationcampain">
@@ -132,7 +132,7 @@
       <db:JoinColumn attribute="ent7#att20" name="oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel8#role16" name="TaskToAnnotationCampain" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="task_oid"/>
+      <db:JoinColumn attribute="ent1#att1" name="oid_task"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="475" gr:y="455" id="ent8" name="Requester" duration="persistent" attributeOrder="ent8#att31" db:database="db2" db:table="requester">
@@ -146,12 +146,12 @@
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel9#role18" name="AnnotationCampainToRequester" maxCard="1">
-      <db:JoinColumn attribute="ent7#att20" name="annotationcampain_oid"/>
+      <db:JoinColumn attribute="ent7#att20" name="oid_campaign"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel12" name="Annotation_Task" sourceEntity="ent6" targetEntity="ent1" db:database="db2" db:table="annotation">
+  <Relationship id="rel12" name="Annotation_Task" sourceEntity="ent6" targetEntity="ent1" db:database="db2" db:table="annotation" db:isView="false">
     <RelationshipRole1 id="rel12#role23" name="AnnotationToTask" maxCard="1">
-      <db:JoinColumn attribute="ent6#att17" name="annotation_oid"/>
+      <db:JoinColumn attribute="ent6#att17" name="oid_annotation"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel12#role24" name="TaskToAnnotation" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
@@ -162,7 +162,7 @@
       <db:JoinColumn attribute="ent7#att20" name="oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel14#role28" name="ItemToAnnotationCampain" maxCard="1">
-      <db:JoinColumn attribute="ent3#att8" name="item_oid"/>
+      <db:JoinColumn attribute="ent3#att8" name="oid_item"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="565" gr:y="315" id="ent10" name="WorkerTaskStatus" duration="persistent" attributeOrder="ent10#att29 ent10#att30" db:database="db2" db:table="workertaskstatus">
@@ -174,12 +174,12 @@
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel15#role30" name="WorkerTaskStatusToWorker" maxCard="1">
-      <db:JoinColumn attribute="ent10#att29" name="workertaskstatus_oid"/>
+      <db:JoinColumn attribute="ent10#att29" name="oid_worker"/>
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel16" name="WorkerTaskStatus_Task" sourceEntity="ent10" targetEntity="ent1" db:database="db2" db:table="workertaskstatus">
     <RelationshipRole1 id="rel16#role31" name="WorkerTaskStatusToTask" maxCard="1">
-      <db:JoinColumn attribute="ent10#att29" name="workertaskstatus_oid"/>
+      <db:JoinColumn attribute="ent10#att29" name="oid_worker"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel16#role32" name="TaskToWorkerTaskStatus" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
