@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-10" gr:y="-125" id="sv1#area1" name="RequesterArea" landmark="true" protected="true" landmarks="sv1#area1#page6 sv1#area1#page15" defaultPage="sv1#area1#page6">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-10" gr:y="-125" id="sv1#area1" name="RequesterArea" landmark="true" protected="true" landmarks="sv1#area1#page6 sv1#area1#page15 sv1#area1#page2" defaultPage="sv1#area1#page6">
   <OperationUnits>
     <CreateUnit gr:x="245" gr:y="740" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
       <OKLink id="sv1#area1#cru4#oln6" name="OKFlow6" to="sv1#area1#page6" automaticCoupling="true"/>
@@ -41,6 +41,10 @@
     </ConnectUnit>
     <CreateUnit gr:x="935" gr:y="140" id="sv1#area1#cru10" name="Create WorkerTaskStatus" entity="ent10" bulk="true">
       <OKLink id="sv1#area1#cru10#oln27" name="OKFlow27" to="sv1#area1#page6" automaticCoupling="true" gr:bendpoints="-282,-183,573,-148;-673,-183,182,-148"/>
+    </CreateUnit>
+    <CreateUnit gr:x="875" gr:y="870" id="sv1#area1#cru6" name="Create Skill" entity="ent2">
+      <KOLink id="sv1#area1#cru6#kln1" name="KOFlow1" to="sv1#area1#page3" automaticCoupling="true"/>
+      <OKLink id="sv1#area1#cru6#oln1" name="OKFlow1" to="sv1#area1#page2#inu3" automaticCoupling="true"/>
     </CreateUnit>
   </OperationUnits>
 </Area>
