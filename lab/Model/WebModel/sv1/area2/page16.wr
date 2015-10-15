@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="415" gr:y="550" id="sv1#area2#page16" name="Items of Task">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="405" gr:y="630" id="sv1#area2#page16" name="Items of Task">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area2#page16#pwu4" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11" linkOrder="sv1#area2#page16#pwu4#ln46">
       <Selector id="sv1#area2#page16#pwu4#su18" defaultPolicy="fill" booleanOperator="and">
@@ -21,6 +21,20 @@
           <layout:Link link="sv1#area2#page16#pwu4#ln46"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
