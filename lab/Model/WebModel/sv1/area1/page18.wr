@@ -30,7 +30,7 @@
       <Message xml:space="preserve">Fill in the task details and then proceed to select the items to include, then you can assign the workers.
 The items must have already been created at the home page.</Message>
     </MultiMessageUnit>
-    <MultiChoiceIndexUnit gr:x="5" gr:y="345" id="sv1#area1#page18#mciu4" name="CheckableList4" linkOrder="sv1#area1#page18#mciu4#ln62" entity="ent4" displayAttributes="userName ent4#att13 ent4#att14 ent4#att15">
+    <MultiChoiceIndexUnit gr:x="5" gr:y="345" id="sv1#area1#page18#mciu4" name="Workers" linkOrder="sv1#area1#page18#mciu4#ln62" entity="ent4" displayAttributes="userName ent4#att13 ent4#att14 ent4#att15">
       <Link id="sv1#area1#page18#mciu4#ln62" name="Assign to task" to="sv1#area1#cnu6" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page18#mciu4#ln62#par151" name="Target oid_task [Task]_PASSING_KeyCondition21 [oid] [Worker] [Target]" source="userOIDChecked" target="sv1#area1#cnu6#su29#kcond21.userOID"/>
         <LinkParameter id="sv1#area1#page18#mciu4#ln62#par153" name="Target oid_task [Task]_PASSING_KeyCondition20 [oid_task] [Task] [Source]" sourceLinkParameter="sv1#area1#cnu5#oln23#par147" target="sv1#area1#cnu6#su28#kcond20.ent1#att1"/>
