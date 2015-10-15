@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="600" gr:y="395" id="sv1#area2#page9" name="Add Annotation">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="775" gr:y="425" id="sv1#area2#page9" name="Add Annotation">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#area2#page9#enu4" name="Annotation" fieldOrder="sv1#area2#page9#enu4#fld4 sv1#area2#page9#enu4#sfld1" linkOrder="sv1#area2#page9#enu4#ln24">
       <SelectionField id="sv1#area2#page9#enu4#sfld1" name="Confidence" type="integer" modifiable="true" slotOrder="sv1#area2#page9#enu4#sfld1#slot1">
@@ -6,12 +6,8 @@
       </SelectionField>
       <Field id="sv1#area2#page9#enu4#fld4" name="Label" type="string" modifiable="true"/>
       <Link id="sv1#area2#page9#enu4#ln24" name="Save Annotation" to="sv1#area2#cru9" type="normal" validate="true">
-        <LinkParameter id="sv1#area2#page9#enu4#ln24#par49" name="oid_item_PASSING" sourceLinkParameter="sv1#area2#page8#pwu2#ln5#par16" passing="true"/>
-        <LinkParameter id="sv1#area2#page9#enu4#ln24#par50" name="oid_task_PASSING" sourceLinkParameter="sv1#area2#page8#pwu2#ln5#par48" passing="true"/>
         <LinkParameter id="sv1#area2#page9#enu4#ln24#par39" name="Confidence_Confidence" source="sv1#area2#page9#enu4#sfld1" target="sv1#area2#cru9.ent6#att19"/>
-        <LinkParameter id="sv1#area2#page9#enu4#ln24#par43" name="oid_item_PASSING_Item.oid_item(AnnotationToItem)" sourceLinkParameter="sv1#area2#page8#pwu2#ln5#par16" target="sv1#area2#cru9.rel5#role9.ent3#att8"/>
         <LinkParameter id="sv1#area2#page9#enu4#ln24#par44" name="Label_Label" source="sv1#area2#page9#enu4#fld4" target="sv1#area2#cru9.ent6#att18"/>
-        <LinkParameter id="sv1#area2#page9#enu4#ln24#par45" name="oid_item_PASSING_Task.oid_task(AnnotationToTask)" sourceLinkParameter="sv1#area2#page8#pwu2#ln5#par48" target="sv1#area2#cru9.rel12#role23.ent1#att1"/>
       </Link>
     </EntryUnit>
     <GetUnit gr:x="5" gr:y="90" id="sv1#area2#page9#gtu1" name="GetUserID" contextParameters="UserCtxParam">

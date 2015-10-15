@@ -16,12 +16,8 @@
         <LinkParameter id="sv1#area2#gtu5#ln13#par20" name="UserCtxParam.oid_KeyCondition4 [oid] [Worker] [Target]" source="sv1#area2#gtu5.UserCtxParam" target="sv1#area2#cnu2#su9#kcond4.userOID"/>
       </Link>
     </GetUnit>
-    <CreateUnit id="sv1#area2#cru9" entity="ent6" gr:x="895" gr:y="440" name="Item Annotation" linkOrder="sv1#area2#cru9#ln27">
+    <CreateUnit id="sv1#area2#cru9" entity="ent6" gr:x="1070" gr:y="435" name="Item Annotation">
       <OKLink id="sv1#area2#cru9#oln8" name="OKFlow8" to="sv1#area2#page8" automaticCoupling="true" gr:bendpoints="-1,-90,469,0"/>
-      <Link id="sv1#area2#cru9#ln27" name="Flow27" to="sv1#area2#page8#pwu2" type="transport" validate="true" gr:bendpoints="-1,-85,469,-5">
-        <LinkParameter id="sv1#area2#cru9#ln27#par51" name="oid_item_PASSING_current oid_item" sourceLinkParameter="sv1#area2#page9#enu4#ln24#par49" target="sv1#area2#page8#pwu2.current.ent3#att8"/>
-        <LinkParameter id="sv1#area2#cru9#ln27#par52" name="oid_task_PASSING_Items Of Task [oid_task]" sourceLinkParameter="sv1#area2#page9#enu4#ln24#par50" target="sv1#area2#page8#pwu2#su17#rcond6.ent1#att1"/>
-      </Link>
     </CreateUnit>
   </OperationUnits>
 </Area>

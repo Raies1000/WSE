@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="610" gr:y="665" id="sv1#area2#page21" name="View Annotation">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="610" gr:y="785" id="sv1#area2#page21" name="View Annotation">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv1#area2#page21#dau2" name="Annotation" entity="ent6" displayAttributes="ent6#att18 ent6#att19">
       <Selector id="sv1#area2#page21#dau2#su20" defaultPolicy="fill" booleanOperator="and">
