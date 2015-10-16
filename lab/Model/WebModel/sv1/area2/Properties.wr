@@ -17,7 +17,9 @@
       </Link>
     </GetUnit>
     <CreateUnit id="sv1#area2#cru9" entity="ent6" gr:x="1070" gr:y="435" name="Item Annotation">
-      <OKLink id="sv1#area2#cru9#oln8" name="OKFlow8" to="sv1#area2#page8" automaticCoupling="true" gr:bendpoints="-1,-90,469,0"/>
+      <OKLink id="sv1#area2#cru9#oln8" name="OKFlow8" to="sv1#area2#page8#pwu2" gr:bendpoints="-1,-90,469,0">
+        <LinkParameter id="sv1#area2#cru9#oln8#par83" name="oid_task_PASSING_RoleCondition1 [oid_task]" sourceLinkParameter="sv1#area2#page9#enu4#ln24#par82" target="sv1#area2#page8#pwu2#su1#rcond1.ent1#att1"/>
+      </OKLink>
     </CreateUnit>
   </OperationUnits>
 </Area>

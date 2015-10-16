@@ -1,19 +1,38 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="710" gr:y="1185" id="sv1#area1#page24" name="View Workers of Task">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page24#pwu6" name="Workers" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="email ent4#att13 ent4#att14 ent4#att15">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page24#pwu6" name="Workers" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="email ent4#att13 ent4#att14 ent4#att15 rel3#role5.ent5#att25" linkOrder="sv1#area1#page24#pwu6#ln30 sv1#area1#page24#pwu6#ln31">
       <Selector id="sv1#area1#page24#pwu6#su6" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page24#pwu6#su6#rcond14" name="Worker of Task" predicate="in" implied="false" role="rel4#role8"/>
+        <RelationshipRoleCondition id="sv1#area1#page24#pwu6#su6#rcond31" name="Worker Bank" predicate="in" implied="true" role="rel3#role6"/>
       </Selector>
+      <Link id="sv1#area1#page24#pwu6#ln30" name="View All Annotations" to="sv1#area1#page25#pwu8" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page24#pwu6#ln30#par70" name="oid_task_PASSING_RoleCondition25 [oid_task]" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par69" target="sv1#area1#page25#pwu8#su33#rcond25.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln30#par71" name="oid_Worker to Annotation [oid]" source="data[].userOID" target="sv1#area1#page25#pwu8#su33#rcond26.userOID"/>
+      </Link>
+      <Link id="sv1#area1#page24#pwu6#ln31" name="Reward User" to="sv1#area1#mathu2" type="normal" validate="true" gr:bendpoints="-175,137,270,-73">
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par95" name="Reward_PASSING" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par84" passing="true"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par96" name="oid_PASSING" source="data[].userOID" passing="true"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par99" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par69" passing="true"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par114" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par113" passing="true"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par119" name="Budget_PASSING" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par118" passing="true"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par120" name="Reward_PASSING_Reward" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par84" target="sv1#area1#mathu2#mathv2"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par121" name="WorkerToPiggyBank.Balance_Balance" source="data[].rel3#role5$ent5#att25" target="sv1#area1#mathu2#mathv3"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par128" name="WorkerToPiggyBank.oid_bank_PASSING" source="data[].rel3#role5_ent5#att16" passing="true"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln31#par130" name="Balance + Reward_Expression" sourceValue="Balance + Reward" target="sv1#area1#mathu2.expr"/>
+      </Link>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page24#pwu6">
+          <layout:Link link="sv1#area1#page24#pwu6#ln30"/>
+          <layout:Link link="sv1#area1#page24#pwu6#ln31"/>
           <layout:Attribute attribute="email"/>
           <layout:Attribute attribute="ent4#att13"/>
           <layout:Attribute attribute="ent4#att14"/>
           <layout:Attribute attribute="ent4#att15"/>
+          <layout:Attribute attribute="rel3#role5.ent5#att25"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

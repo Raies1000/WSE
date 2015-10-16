@@ -64,7 +64,7 @@
       </TargetSelector>
       <OKLink id="sv1#area1#cnu3#oln10" name="OKFlow10" to="sv1#area1#page22#pwu9" automaticCoupling="true"/>
     </ConnectUnit>
-    <ConnectUnit gr:x="945" gr:y="1360" id="sv1#area1#cnu4" name="Connect Workers to Task" relationship="rel4#role7">
+    <ConnectUnit gr:x="970" gr:y="1385" id="sv1#area1#cnu4" name="Connect Workers to Task" relationship="rel4#role7">
       <SourceSelector id="sv1#area1#cnu4#su22" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu4#su22#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </SourceSelector>
@@ -73,5 +73,23 @@
       </TargetSelector>
       <OKLink id="sv1#area1#cnu4#oln11" name="OKFlow11" to="sv1#area1#page24#pwu6" automaticCoupling="true"/>
     </ConnectUnit>
+    <ModifyUnit gr:x="485" gr:y="1460" id="sv1#area1#mfu1" name="RewardWorker" entity="ent5" customDescriptor="false">
+      <Selector id="sv1#area1#mfu1#su35" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#mfu1#su35#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <MathUnit gr:x="295" gr:y="1420" id="sv1#area1#mathu2" name="Calculate new balance" resultType="integer" defaultExpression="Balance + Reward">
+      <MathVariable id="sv1#area1#mathu2#mathv2" name="Reward"/>
+      <MathVariable id="sv1#area1#mathu2#mathv3" name="Balance"/>
+      <Link id="sv1#area1#mathu2#ln33" name="Flow33" to="sv1#area1#mfu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#mathu2#ln33#par122" name="Result_Balance" source="result" target="sv1#area1#mfu1.ent5#att25"/>
+        <LinkParameter id="sv1#area1#mathu2#ln33#par124" name="Budget_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par119" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#ln33#par125" name="oid_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par96" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#ln33#par126" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par99" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#ln33#par127" name="Reward_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par95" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#ln33#par129" name="WorkerToPiggyBank.oid_bank_PASSING_KeyCondition9 [oid_bank]" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par128" target="sv1#area1#mfu1#su35#kcond9.ent5#att16"/>
+        <LinkParameter id="sv1#area1#mathu2#ln33#par131" name="WorkerToPiggyBank.oid_bank_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par128" passing="true"/>
+      </Link>
+    </MathUnit>
   </OperationUnits>
 </Area>

@@ -4,7 +4,10 @@
       <Selector id="sv1#area2#page8#pwu2#su1" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area2#page8#pwu2#su1#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
-      <Link id="sv1#area2#page8#pwu2#ln6" name="Add Annotation" to="sv1#area2#page9#enu4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area2#page8#pwu2#ln6" name="Add Annotation" to="sv1#area2#page9#enu4" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page8#pwu2#ln6#par75" name="oid_item_PASSING" source="data[].ent3#att8" passing="true"/>
+        <LinkParameter id="sv1#area2#page8#pwu2#ln6#par79" name="oid_task_PASSING" sourceLinkParameter="sv1#area2#page7#pwu1#ln5#par78" passing="true"/>
+      </Link>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

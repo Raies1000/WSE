@@ -20,8 +20,15 @@
         <LinkParameter id="sv1#area1#page19#inu2#ln26#par59" name="oid_task_Not Assigned Worker [oid_task]" source="data[].ent1#att1" target="sv1#area1#page23#mciu6#su30#rcond16.ent1#att1"/>
         <LinkParameter id="sv1#area1#page19#inu2#ln26#par65" name="MinAccuracy_PASSING" source="data[].ent1#att12" passing="true"/>
         <LinkParameter id="sv1#area1#page19#inu2#ln26#par66" name="MinAccuracy_Accurracy" source="data[].ent1#att12" target="sv1#area1#page23#mciu6#su30#acond5"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln26#par67" name="oid_task_Skill of Task of Workers [oid_task]" source="data[].ent1#att1" target="sv1#area1#page23#mciu6#su30#rcond22.ent1#att1"/>
       </Link>
-      <Link id="sv1#area1#page19#inu2#ln28" name="View Workers of Task" to="sv1#area1#page24#pwu6" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area1#page19#inu2#ln28" name="View Workers of Task" to="sv1#area1#page24#pwu6" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page19#inu2#ln28#par68" name="oid_task_Worker of Task [oid_task]" source="data[].ent1#att1" target="sv1#area1#page24#pwu6#su6#rcond14.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln28#par69" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln28#par84" name="Reward_PASSING" source="data[].ent1#att4" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln28#par113" name="TaskToAnnotationCampain.oid_campaign_PASSING" source="data[].rel8#role16_ent7#att20" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln28#par118" name="Budget_PASSING" sourceLinkParameter="sv1#area1#page6#inu1#ln40#par117" passing="true"/>
+      </Link>
     </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

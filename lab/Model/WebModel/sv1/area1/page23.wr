@@ -8,6 +8,7 @@
       <Selector id="sv1#area1#page23#mciu6#su30" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page23#mciu6#su30#rcond16" name="Not Assigned Worker" predicate="notIn" implied="false" role="rel4#role8"/>
         <AttributesCondition id="sv1#area1#page23#mciu6#su30#acond5" name="Accurracy" predicate="gteq" booleanOperator="and" implied="false" attributes="ent4#att15"/>
+        <RelationshipRoleCondition id="sv1#area1#page23#mciu6#su30#rcond22" name="Skill of Task of Workers" predicate="in" implied="false" role="rel6#role12.rel2#role4"/>
       </Selector>
     </MultiChoiceIndexUnit>
   </ContentUnits>

@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="685" gr:y="1405" id="sv1#area1#page25" name="View Annotation of Worker">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page25#pwu8" name="Annotations" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="rel5#role9.ent3#att9 ent6#att18 ent6#att19 rel5#role9.ent3#att10">
+      <Selector id="sv1#area1#page25#pwu8#su33" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area1#page25#pwu8#su33#rcond25" name="Task to Annotation" predicate="in" implied="false" role="rel12#role24"/>
+        <RelationshipRoleCondition id="sv1#area1#page25#pwu8#su33#rcond26" name="Worker to Annotation" predicate="in" implied="false" role="rel7#role13"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page25#pwu8">
+          <layout:Attribute attribute="rel5#role9.ent3#att9"/>
+          <layout:Attribute attribute="ent6#att18"/>
+          <layout:Attribute attribute="ent6#att19"/>
+          <layout:Attribute attribute="rel5#role9.ent3#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

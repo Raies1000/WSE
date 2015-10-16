@@ -13,7 +13,10 @@
         <LinkParameter id="sv1#area2#page7#pwu1#ln52#par107" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#area2#page7#gtu7#ln19#par106" passing="true"/>
         <LinkParameter id="sv1#area2#page7#pwu1#ln52#par102" name="oid_task_Items Of Task [oid_task]" source="data[].ent1#att1" target="sv1#area2#page28#pwu5#su34#rcond21.ent1#att1"/>
       </Link>
-      <Link id="sv1#area2#page7#pwu1#ln5" name="View Pending Tasks" to="sv1#area2#page8#pwu2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area2#page7#pwu1#ln5" name="View Pending Tasks" to="sv1#area2#page8#pwu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page7#pwu1#ln5#par77" name="oid_task_RoleCondition1 [oid_task]" source="data[].ent1#att1" target="sv1#area2#page8#pwu2#su1#rcond1.ent1#att1"/>
+        <LinkParameter id="sv1#area2#page7#pwu1#ln5#par78" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+      </Link>
     </PowerIndexUnit>
     <GetUnit gr:x="0" gr:y="95" id="sv1#area2#page7#gtu7" name="GetUserID" contextParameters="UserCtxParam">
       <Link id="sv1#area2#page7#gtu7#ln19" name="Flow19" to="sv1#area2#page7#pwu1" type="transport" validate="true">
