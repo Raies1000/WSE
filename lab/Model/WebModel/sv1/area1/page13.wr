@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1195" gr:y="1005" id="sv1#area1#page13" name="Add Skills For Task">
+  <ContentUnits>
+    <MultiChoiceIndexUnit id="sv1#area1#page13#mciu5" entity="ent2" gr:x="0" gr:y="0" name="Skills" displayAttributes="ent2#att28" linkOrder="sv1#area1#page13#mciu5#ln11">
+      <Selector id="sv1#area1#page13#mciu5#su4" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area1#page13#mciu5#su4#rcond13" role="rel6#role12" predicate="notIn" implied="false" name="RoleCondition6"/>
+      </Selector>
+      <Link id="sv1#area1#page13#mciu5#ln11" name="Add Skills to Task" to="sv1#area1#cnu3" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page13#mciu5#ln11#par50" name="Checked oid_skills_KeyCondition6 [oid_skills] [Skills] [Source]" source="ent2#att7Checked" target="sv1#area1#cnu3#su11#kcond6.ent2#att7"/>
+        <LinkParameter id="sv1#area1#page13#mciu5#ln11#par51" name="oid_task_PASSING_KeyCondition7 [oid_task] [Task] [Target]" sourceLinkParameter="sv1#area1#page19#inu2#ln22#par43" target="sv1#area1#cnu3#su17#kcond7.ent1#att1"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page13#mciu5">
+          <layout:Attribute attribute="ent2#att28"/>
+          <layout:Link link="sv1#area1#page13#mciu5#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

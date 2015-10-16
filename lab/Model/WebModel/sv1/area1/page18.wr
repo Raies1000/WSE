@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="405" gr:y="10" id="sv1#area1#page18" name="AddTask">
   <ContentUnits>
-    <EntryUnit gr:x="15" gr:y="85" id="sv1#area1#page18#enu9" name="AddTask" fieldOrder="sv1#area1#page18#enu9#fld27 sv1#area1#page18#enu9#fld28 sv1#area1#page18#enu9#fld29 sv1#area1#page18#enu9#fld30 sv1#area1#page18#enu9#fld31" linkOrder="sv1#area1#page18#enu9#ln60">
+    <EntryUnit gr:x="15" gr:y="85" id="sv1#area1#page18#enu9" name="AddTask" fieldOrder="sv1#area1#page18#enu9#fld27 sv1#area1#page18#enu9#fld28 sv1#area1#page18#enu9#fld29 sv1#area1#page18#enu9#fld30 sv1#area1#page18#enu9#fld31 sv1#area1#page18#enu9#fld5" linkOrder="sv1#area1#page18#enu9#ln60">
       <Field id="sv1#area1#page18#enu9#fld31" name="Expiration" type="timestamp" modifiable="true"/>
       <Field id="sv1#area1#page18#enu9#fld30" name="Execution Time" type="time" modifiable="true"/>
       <Field id="sv1#area1#page18#enu9#fld29" name="Reward" type="float" modifiable="true"/>
@@ -14,8 +14,9 @@
         <LinkParameter id="sv1#area1#page18#enu9#ln60#par136" name="Reward_Reward" source="sv1#area1#page18#enu9#fld29" target="sv1#area1#cru8.ent1#att4"/>
         <LinkParameter id="sv1#area1#page18#enu9#ln60#par137" name="Title_Title" source="sv1#area1#page18#enu9#fld27" target="sv1#area1#cru8.ent1#att2"/>
         <LinkParameter id="sv1#area1#page18#enu9#ln60#par138" name="oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page6#inu1#ln38#par64" passing="true"/>
-        <LinkParameter id="sv1#area1#page18#enu9#ln60#par143" name="Minimum Accuracy Required_PASSING" source="sv1#area1#page18#enu9#fld32" passing="true"/>
+        <LinkParameter id="sv1#area1#page18#enu9#ln60#par17" name="Min Accuracy_MinAccuracy" source="sv1#area1#page18#enu9#fld5" target="sv1#area1#cru8.ent1#att12"/>
       </Link>
+      <Field id="sv1#area1#page18#enu9#fld5" name="Min Accuracy" type="integer" modifiable="true"/>
     </EntryUnit>
     <MultiChoiceIndexUnit id="sv1#area1#page18#mciu3" name="Items" gr:x="0" gr:y="210" entity="ent3" displayAttributes="ent3#att9 ent3#att10" linkOrder="sv1#area1#page18#mciu3#ln58">
       <Selector id="sv1#area1#page18#mciu3#su23" defaultPolicy="fill" booleanOperator="and">
@@ -67,6 +68,7 @@ The items must have already been created at the home page.</Message>
           <layout:Field field="sv1#area1#page18#enu9#fld29"/>
           <layout:Field field="sv1#area1#page18#enu9#fld30"/>
           <layout:Field field="sv1#area1#page18#enu9#fld31"/>
+          <layout:Field field="sv1#area1#page18#enu9#fld5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

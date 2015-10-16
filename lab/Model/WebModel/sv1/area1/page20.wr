@@ -1,9 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1325" gr:y="490" id="sv1#area1#page20" name="Edit Task">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1325" gr:y="490" id="sv1#area1#page20" name="Add Items To Task">
   <ContentUnits>
-    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page20#mciu2" name="Items" entity="ent3" displayAttributes="ent3#att9 ent3#att10">
+    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page20#mciu2" name="Items" entity="ent3" displayAttributes="ent3#att9 ent3#att10" linkOrder="sv1#area1#page20#mciu2#ln15">
       <Selector id="sv1#area1#page20#mciu2#su19" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page20#mciu2#su19#acond3" name="oid_campaign" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.ent7#att20"/>
+        <RelationshipRoleCondition id="sv1#area1#page20#mciu2#su19#rcond3" name="NOT Task to Item" predicate="notIn" implied="false" role="rel1#role2"/>
       </Selector>
+      <Link id="sv1#area1#page20#mciu2#ln15" name="Add Items to Task" to="sv1#area1#cnu1" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page20#mciu2#ln15#par15" name="Checked oid_item_KeyCondition1 [oid_item] [Item] [Source]" source="ent3#att8Checked" target="sv1#area1#cnu1#su2#kcond1.ent3#att8"/>
+        <LinkParameter id="sv1#area1#page20#mciu2#ln15#par16" name="oid_task_PASSING_KeyCondition2 [oid_task] [Task] [Target]" sourceLinkParameter="sv1#area1#page19#inu2#ln43#par74" target="sv1#area1#cnu1#su3#kcond2.ent1#att1"/>
+      </Link>
     </MultiChoiceIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -12,6 +17,7 @@
         <layout:Unit unitId="sv1#area1#page20#mciu2">
           <layout:Attribute attribute="ent3#att9"/>
           <layout:Attribute attribute="ent3#att10"/>
+          <layout:Link link="sv1#area1#page20#mciu2#ln15"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

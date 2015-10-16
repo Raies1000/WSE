@@ -46,13 +46,14 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="920" gr:y="215" id="ent1" name="Task" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" db:database="db2" db:table="task">
+  <Entity gr:x="920" gr:y="215" id="ent1" name="Task" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att12" db:database="db2" db:table="task">
     <Attribute id="ent1#att1" key="true" name="oid_task" type="integer" db:column="oid_task"/>
-    <Attribute id="ent1#att6" name="Expiration" type="timestamp" db:column="expiration"/>
-    <Attribute id="ent1#att5" name="ExecutionTime" type="time" db:column="executiontime"/>
-    <Attribute id="ent1#att4" name="Reward" type="integer" db:column="reward"/>
-    <Attribute id="ent1#att3" name="Description" type="string" db:column="description"/>
-    <Attribute id="ent1#att2" name="Title" type="string" db:column="title"/>
+    <Attribute id="ent1#att6" name="Expiration" type="timestamp" db:column="expiration" key="false"/>
+    <Attribute id="ent1#att5" name="ExecutionTime" type="time" db:column="executiontime" key="false"/>
+    <Attribute id="ent1#att4" name="Reward" type="integer" db:column="reward" key="false"/>
+    <Attribute id="ent1#att3" name="Description" type="string" db:column="description" key="false"/>
+    <Attribute id="ent1#att2" name="Title" type="string" db:column="title" key="false"/>
+    <Attribute id="ent1#att12" name="MinAccuracy" type="integer" key="false" db:column="minaccuracy"/>
   </Entity>
   <Entity gr:x="25" gr:y="410" id="ent2" name="Skills" duration="persistent" attributeOrder="ent2#att7 ent2#att28" db:database="db2" db:table="skills">
     <Attribute id="ent2#att7" key="true" name="oid_skills" type="integer" db:column="oid_skills"/>
@@ -193,6 +194,14 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel5#role10" name="ItemToAnnotation" maxCard="N">
       <db:JoinColumn attribute="ent3#att8" name="item_oid_item"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel6" name="Skills_Task" sourceEntity="ent2" targetEntity="ent1" gr:bendpoints="343,-147,-567,8" db:database="db2" db:table="skills_task">
+    <RelationshipRole1 id="rel6#role11" name="SkillsToTask" maxCard="N">
+      <db:JoinColumn attribute="ent2#att7" name="skills_oid_skills"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="TaskToSkills" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="task_oid_task"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

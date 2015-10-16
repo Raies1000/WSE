@@ -1,13 +1,27 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="860" gr:y="640" id="sv1#area1#page19" name="View Campaign Tasks">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page19#inu2" name="Task List" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att6" linkOrder="sv1#area1#page19#inu2#ln43">
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page19#inu2" name="Task List" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att6" linkOrder="sv1#area1#page19#inu2#ln43 sv1#area1#page19#inu2#ln21 sv1#area1#page19#inu2#ln22 sv1#area1#page19#inu2#ln23 sv1#area1#page19#inu2#ln26 sv1#area1#page19#inu2#ln28">
       <Selector id="sv1#area1#page19#inu2#su15" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page19#inu2#su15#acond2" name="oid_campaign" predicate="eq" booleanOperator="or" implied="false" attributes="rel8#role16.ent7#att20"/>
       </Selector>
-      <Link id="sv1#area1#page19#inu2#ln43" name="Edit Task Details" to="sv1#area1#page20#mciu2" type="normal" validate="true">
+      <Link id="sv1#area1#page19#inu2#ln43" name="Add Items To Task" to="sv1#area1#page20#mciu2" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page19#inu2#ln43#par73" name="TaskToAnnotationCampain.oid_campaign_oid_campaign" source="data[].rel8#role16_ent7#att20" target="sv1#area1#page20#mciu2#su19#acond3"/>
         <LinkParameter id="sv1#area1#page19#inu2#ln43#par74" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln43#par21" name="oid_task_NOT Task to Item [oid_task]" source="data[].ent1#att1" target="sv1#area1#page20#mciu2#su19#rcond3.ent1#att1"/>
       </Link>
+      <Link id="sv1#area1#page19#inu2#ln21" name="View Items of Task" to="sv1#area1#page12#pwu7" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area1#page19#inu2#ln22" name="Add Required Skills to Task" to="sv1#area1#page13#mciu5" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page19#inu2#ln22#par22" name="oid_task_RoleCondition6 [oid_task]" source="data[].ent1#att1" target="sv1#area1#page13#mciu5#su4#rcond13.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln22#par43" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+      </Link>
+      <Link id="sv1#area1#page19#inu2#ln23" name="View Required Skills" to="sv1#area1#page22#pwu9" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area1#page19#inu2#ln26" name="Add Workers to Task" to="sv1#area1#page23#mciu6" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page19#inu2#ln26#par53" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln26#par59" name="oid_task_Not Assigned Worker [oid_task]" source="data[].ent1#att1" target="sv1#area1#page23#mciu6#su30#rcond16.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln26#par65" name="MinAccuracy_PASSING" source="data[].ent1#att12" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln26#par66" name="MinAccuracy_Accurracy" source="data[].ent1#att12" target="sv1#area1#page23#mciu6#su30#acond5"/>
+      </Link>
+      <Link id="sv1#area1#page19#inu2#ln28" name="View Workers of Task" to="sv1#area1#page24#pwu6" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -18,6 +32,11 @@
           <layout:Attribute attribute="ent1#att4"/>
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Link link="sv1#area1#page19#inu2#ln43"/>
+          <layout:Link link="sv1#area1#page19#inu2#ln21"/>
+          <layout:Link link="sv1#area1#page19#inu2#ln22"/>
+          <layout:Link link="sv1#area1#page19#inu2#ln23"/>
+          <layout:Link link="sv1#area1#page19#inu2#ln26"/>
+          <layout:Link link="sv1#area1#page19#inu2#ln28"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

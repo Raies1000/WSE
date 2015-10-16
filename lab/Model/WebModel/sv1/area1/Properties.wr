@@ -46,5 +46,32 @@
       <KOLink id="sv1#area1#cru6#kln1" name="KOFlow1" to="sv1#area1#page3" automaticCoupling="true"/>
       <OKLink id="sv1#area1#cru6#oln1" name="OKFlow1" to="sv1#area1#page2#inu3" automaticCoupling="true"/>
     </CreateUnit>
+    <ConnectUnit gr:x="1385" gr:y="705" id="sv1#area1#cnu1" name="Connect Items to Task" relationship="rel1#role1">
+      <SourceSelector id="sv1#area1#cnu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu1#su2#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#cnu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu1#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area1#cnu1#oln9" name="OKFlow9" to="sv1#area1#page12#pwu7" automaticCoupling="true"/>
+    </ConnectUnit>
+    <ConnectUnit gr:x="1440" gr:y="965" id="sv1#area1#cnu3" name="Connect Skills to Task" relationship="rel6#role11">
+      <SourceSelector id="sv1#area1#cnu3#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu3#su11#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#cnu3#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu3#su17#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area1#cnu3#oln10" name="OKFlow10" to="sv1#area1#page22#pwu9" automaticCoupling="true"/>
+    </ConnectUnit>
+    <ConnectUnit gr:x="945" gr:y="1360" id="sv1#area1#cnu4" name="Connect Workers to Task" relationship="rel4#role7">
+      <SourceSelector id="sv1#area1#cnu4#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu4#su22#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#cnu4#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#cnu4#su27#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area1#cnu4#oln11" name="OKFlow11" to="sv1#area1#page24#pwu6" automaticCoupling="true"/>
+    </ConnectUnit>
   </OperationUnits>
 </Area>

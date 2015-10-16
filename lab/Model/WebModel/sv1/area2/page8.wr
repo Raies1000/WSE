@@ -1,8 +1,22 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="440" gr:y="310" id="sv1#area2#page8" name="Pending Items of Task">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="460" gr:y="310" id="sv1#area2#page8" name="Pending Items of Task">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area2#page8#pwu2" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11" linkOrder="sv1#area2#page8#pwu2#ln6">
+      <Selector id="sv1#area2#page8#pwu2#su1" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area2#page8#pwu2#su1#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel1#role2"/>
+      </Selector>
+      <Link id="sv1#area2#page8#pwu2#ln6" name="Add Annotation" to="sv1#area2#page9#enu4" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page8#pwu2">
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Link link="sv1#area2#page8#pwu2#ln6"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

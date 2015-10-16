@@ -3,16 +3,17 @@
     <MultiMessageUnit gr:x="170" gr:y="0" id="sv1#area2#page7#mssu7" name="homemsg">
       <Message xml:space="preserve">worker's home</Message>
     </MultiMessageUnit>
-    <PowerIndexUnit gr:x="80" gr:y="230" id="sv1#area2#page7#pwu1" name="Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area2#page7#pwu1#ln52">
+    <PowerIndexUnit gr:x="80" gr:y="230" id="sv1#area2#page7#pwu1" name="Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area2#page7#pwu1#ln52 sv1#area2#page7#pwu1#ln5">
       <Selector id="sv1#area2#page7#pwu1#su13" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area2#page7#pwu1#su13#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel4#role7"/>
-        <AttributesCondition id="sv1#area2#page7#pwu1#su13#acond7" name="Open Campaigns" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role16.ent7#att23" value="TRUE"/>
+        <AttributesCondition id="sv1#area2#page7#pwu1#su13#acond7" name="Open Campaigns" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role16.ent7#att23" value="true"/>
       </Selector>
       <Link id="sv1#area2#page7#pwu1#ln52" name="View Completed Items of Task" to="sv1#area2#page28#pwu5" type="normal" validate="true">
-        <LinkParameter id="sv1#area2#page7#pwu1#ln52#par102" name="oid_task_Items Of Task [oid_task]" source="data[].ent1#att1" target="sv1#area2#page28#pwu5#su34#rcond21.ent1#att1"/>
         <LinkParameter id="sv1#area2#page7#pwu1#ln52#par103" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
         <LinkParameter id="sv1#area2#page7#pwu1#ln52#par107" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#area2#page7#gtu7#ln19#par106" passing="true"/>
+        <LinkParameter id="sv1#area2#page7#pwu1#ln52#par102" name="oid_task_Items Of Task [oid_task]" source="data[].ent1#att1" target="sv1#area2#page28#pwu5#su34#rcond21.ent1#att1"/>
       </Link>
+      <Link id="sv1#area2#page7#pwu1#ln5" name="View Pending Tasks" to="sv1#area2#page8#pwu2" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
     <GetUnit gr:x="0" gr:y="95" id="sv1#area2#page7#gtu7" name="GetUserID" contextParameters="UserCtxParam">
       <Link id="sv1#area2#page7#gtu7#ln19" name="Flow19" to="sv1#area2#page7#pwu1" type="transport" validate="true">
@@ -30,7 +31,7 @@
     <PowerIndexUnit gr:x="75" gr:y="375" id="sv1#area2#page7#pwu3" name="Task History" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3" linkOrder="sv1#area2#page7#pwu3#ln45">
       <Selector id="sv1#area2#page7#pwu3#su10" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area2#page7#pwu3#su10#rcond8" name="RoleCondition8" predicate="in" implied="false" role="rel4#role7"/>
-        <AttributesCondition id="sv1#area2#page7#pwu3#su10#acond8" name="Closed Campaigns" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role16.ent7#att23" value="FALSE"/>
+        <AttributesCondition id="sv1#area2#page7#pwu3#su10#acond8" name="Closed Campaigns" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role16.ent7#att23" value="false"/>
       </Selector>
       <Link id="sv1#area2#page7#pwu3#ln45" name="View Task" to="sv1#area2#page16#pwu4" type="normal" validate="true">
         <LinkParameter id="sv1#area2#page7#pwu3#ln45#par90" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#area2#page7#gtu7#ln44#par88" passing="true"/>
@@ -70,6 +71,7 @@
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Link link="sv1#area2#page7#pwu1#ln52"/>
+          <layout:Link link="sv1#area2#page7#pwu1#ln5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
