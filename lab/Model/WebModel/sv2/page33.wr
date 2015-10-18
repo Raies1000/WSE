@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page33" name="RegisterRequester" gr:x="455" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv2#page33#enu14" name="register" linkOrder="sv2#page33#enu14#ln49" gr:x="0" gr:y="0" fieldOrder="sv2#page33#enu14#fld49 sv2#page33#enu14#fld48 sv2#page33#enu14#fld47 sv2#page33#enu14#fld50">
+      <Field id="sv2#page33#enu14#fld47" name="email" type="string" modifiable="true"/>
+      <Field id="sv2#page33#enu14#fld48" name="password" type="string" modifiable="true"/>
+      <Field id="sv2#page33#enu14#fld49" name="username" type="string" modifiable="true"/>
+      <Field id="sv2#page33#enu14#fld50" name="name" type="string" modifiable="true"/>
+      <Link id="sv2#page33#enu14#ln49" name="Register" to="sv2#cru20" type="normal" validate="true">
+        <LinkParameter id="sv2#page33#enu14#ln49#par187" name="email_PASSING" source="sv2#page33#enu14#fld47" passing="true"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par188" name="name_PASSING" source="sv2#page33#enu14#fld50" passing="true"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par189" name="password_PASSING" source="sv2#page33#enu14#fld48" passing="true"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par190" name="username_PASSING" source="sv2#page33#enu14#fld49" passing="true"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par191" name="email_email" source="sv2#page33#enu14#fld47" target="sv2#cru20.email"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par192" name="1_Group.oid(defaultGroup)" target="sv2#cru20.User2DefaultGroup.groupOID" sourceValue="1"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par193" name="name_Name" source="sv2#page33#enu14#fld50" target="sv2#cru20.ent8#att31"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par194" name="password_password" source="sv2#page33#enu14#fld48" target="sv2#cru20.password"/>
+        <LinkParameter id="sv2#page33#enu14#ln49#par195" name="username_userName" source="sv2#page33#enu14#fld49" target="sv2#cru20.userName"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page33#enu14">
+          <layout:Field field="sv2#page33#enu14#fld49"/>
+          <layout:Field field="sv2#page33#enu14#fld48"/>
+          <layout:Field field="sv2#page33#enu14#fld47"/>
+          <layout:Field field="sv2#page33#enu14#fld50"/>
+          <layout:Link link="sv2#page33#enu14#ln49"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="470" gr:y="775" id="sv1#area1#page2" name="Skills" landmark="true" linkOrder="sv1#area1#page2#ln1">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="475" gr:y="775" id="sv1#area1#page2" name="Skills" landmark="true" linkOrder="sv1#area1#page2#ln1">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page2#inu3" name="Skills" entity="ent2" displayAttributes="ent2#att28"/>
   </ContentUnits>

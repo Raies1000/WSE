@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="660" gr:y="780" id="sv1#area1#page3" name="Add Skill" protected="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="665" gr:y="780" id="sv1#area1#page3" name="Add Skill" protected="false">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page3#enu2" name="Add Skill" fieldOrder="sv1#area1#page3#enu2#fld3" linkOrder="sv1#area1#page3#enu2#ln3">
       <Field id="sv1#area1#page3#enu2#fld3" name="Name" type="string" modifiable="true"/>

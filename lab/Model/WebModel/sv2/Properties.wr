@@ -1,0 +1,28 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Public" homePage="sv2#page31">
+  <OperationUnits>
+    <CreateUnit id="sv2#cru19" name="CreateWorker" gr:x="250" gr:y="290" entity="ent4">
+      <OKLink id="sv2#cru19#oln21" name="OKFlow4" to="sv2#cru21">
+        <LinkParameter id="sv2#cru19#oln21#par196" name="0_Balance" target="sv2#cru21.ent5#att25" sourceValue="0"/>
+        <LinkParameter id="sv2#cru19#oln21#par197" name="oid_Worker.oid(PiggyBankToWorker)" source="userOIDArray" target="sv2#cru21.rel3#role6.userOID"/>
+        <LinkParameter id="sv2#cru19#oln21#par198" name="password_PASSING" source="passwordArray" passing="true"/>
+        <LinkParameter id="sv2#cru19#oln21#par199" name="userName_PASSING" source="userNameArray" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <LoginUnit id="sv2#lgu5" name="login" gr:x="265" gr:y="175">
+      <KOLink id="sv2#lgu5#kln7" name="KOFlow2" to="sv2#page34" automaticCoupling="true"/>
+    </LoginUnit>
+    <CreateUnit id="sv2#cru20" name="CreateRequester" gr:x="240" gr:y="0" entity="ent8">
+      <OKLink id="sv2#cru20#oln24" name="OKFlow3" to="sv2#lgu5">
+        <LinkParameter id="sv2#cru20#oln24#par202" name="username_PASSING_Username" sourceLinkParameter="sv2#page33#enu14#ln49#par190" target="sv2#lgu5.username"/>
+        <LinkParameter id="sv2#cru20#oln24#par203" name="password_PASSING_Password" sourceLinkParameter="sv2#page33#enu14#ln49#par189" target="sv2#lgu5.password"/>
+      </OKLink>
+      <KOLink id="sv2#cru20#kln8" name="KOFlow3" to="sv2#page33" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit id="sv2#cru21" name="CreatePiggyBank" gr:x="435" gr:y="300" entity="ent5">
+      <OKLink id="sv2#cru21#oln26" name="OKFlow5" to="sv2#lgu5">
+        <LinkParameter id="sv2#cru21#oln26#par204" name="userName_PASSING_Username" sourceLinkParameter="sv2#cru19#oln21#par199" target="sv2#lgu5.username"/>
+        <LinkParameter id="sv2#cru21#oln26#par205" name="password_PASSING_Password" sourceLinkParameter="sv2#cru19#oln21#par198" target="sv2#lgu5.password"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+</SiteView>

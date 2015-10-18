@@ -1,0 +1,53 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page31" name="Home" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <MultiMessageUnit id="sv2#page31#mssu1" name="Welcome" linkOrder="sv2#page31#mssu1#ln41 sv2#page31#mssu1#ln42 sv2#page31#mssu1#ln47" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Welcome to the website! please login or register.</Message>
+      <Link id="sv2#page31#mssu1#ln41" name="Login" to="sv2#page34" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page31#mssu1#ln42" name="Register as Worker" to="sv2#page32" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page31#mssu1#ln47" name="Register as Requester" to="sv2#page33" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:CustomLocation name="Page Links">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv2#page31#mssu1">
+            <layout:Link link="sv2#page31#mssu1#ln41"/>
+            <layout:Link link="sv2#page31#mssu1#ln42"/>
+            <layout:Link link="sv2#page31#mssu1#ln47"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Page>

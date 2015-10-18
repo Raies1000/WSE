@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page40" name="Add Annotation" gr:x="825" gr:y="460">
+  <ContentUnits>
+    <EntryUnit id="sv3#area3#page40#enu16" name="Annotation" linkOrder="sv3#area3#page40#enu16#ln64" gr:x="0" gr:y="0" fieldOrder="sv3#area3#page40#enu16#fld53 sv3#area3#page40#enu16#sfld2">
+      <SelectionField id="sv3#area3#page40#enu16#sfld2" name="Confidence" type="integer" modifiable="true" slotOrder="sv3#area3#page40#enu16#sfld2#slot2">
+        <Slot id="sv3#area3#page40#enu16#sfld2#slot2" name="1|2|3|4|5" value="1|2|3|4|5" label="true" output="true"/>
+      </SelectionField>
+      <Field id="sv3#area3#page40#enu16#fld53" name="Label" type="string" modifiable="true"/>
+      <Link id="sv3#area3#page40#enu16#ln64" name="Save Annotation" to="sv3#area3#cru22" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page40#enu16#ln64#par216" name="Confidence_Confidence" source="sv3#area3#page40#enu16#sfld2" target="sv3#area3#cru22.ent6#att19"/>
+        <LinkParameter id="sv3#area3#page40#enu16#ln64#par217" name="Label_Label" source="sv3#area3#page40#enu16#fld53" target="sv3#area3#cru22.ent6#att18"/>
+        <LinkParameter id="sv3#area3#page40#enu16#ln64#par218" name="oid_item_PASSING_Item.oid_item(AnnotationToItem)" sourceLinkParameter="sv3#area3#page37#pwu10#ln61#par211" target="sv3#area3#cru22.rel5#role9.ent3#att8"/>
+        <LinkParameter id="sv3#area3#page40#enu16#ln64#par219" name="oid_task_PASSING_Task.oid_task(AnnotationToTask)" sourceLinkParameter="sv3#area3#page37#pwu10#ln61#par212" target="sv3#area3#cru22.rel12#role23.ent1#att1"/>
+        <LinkParameter id="sv3#area3#page40#enu16#ln64#par220" name="oid_item_PASSING" sourceLinkParameter="sv3#area3#page37#pwu10#ln61#par211" passing="true"/>
+        <LinkParameter id="sv3#area3#page40#enu16#ln64#par221" name="oid_task_PASSING" sourceLinkParameter="sv3#area3#page37#pwu10#ln61#par212" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit id="sv3#area3#page40#gtu11" name="GetUserID" gr:x="5" gr:y="90" contextParameters="UserCtxParam">
+      <Link id="sv3#area3#page40#gtu11#ln65" name="Flow25" to="sv3#area3#cru22" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page40#enu16">
+          <layout:Field field="sv3#area3#page40#enu16#fld53"/>
+          <layout:Field field="sv3#area3#page40#enu16#sfld2"/>
+          <layout:Link link="sv3#area3#page40#enu16#ln64"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

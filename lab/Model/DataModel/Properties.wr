@@ -73,13 +73,15 @@
       <db:JoinColumn attribute="ent1#att1" name="task_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="10" gr:y="225" id="ent4" name="Worker" duration="persistent" attributeOrder="ent4#att13 ent4#att14 ent4#att15" db:database="db2" db:table="worker">
+  <Entity gr:x="10" gr:y="225" id="ent4" name="Worker" duration="persistent" attributeOrder="ent4#att13 ent4#att14 ent4#att15 ent4#att26 ent4#att27" db:database="db2" db:table="worker">
     <Attribute id="ent4#att15" name="AccuracyScore" type="integer" db:column="accuracyscore"/>
     <Attribute id="ent4#att14" name="BirthDate" type="date" db:column="birthdate"/>
     <Attribute id="ent4#att13" name="Name" type="string" db:column="name"/>
     <Generalization superEntity="User">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </Generalization>
+    <Attribute id="ent4#att26" name="tasksDone" type="integer" db:column="tasksdone"/>
+    <Attribute id="ent4#att27" name="tasksSatisfied" type="integer" db:column="taskssatisfied"/>
   </Entity>
   <Relationship id="rel2" name="Worker_Skills" sourceEntity="ent4" targetEntity="ent2" db:database="db2" db:table="worker_skills">
     <RelationshipRole1 id="rel2#role3" name="WorkerToSkills" maxCard="N">
@@ -166,9 +168,10 @@
       <db:JoinColumn attribute="ent3#att8" name="oid_item"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="565" gr:y="315" id="ent10" name="WorkerTaskStatus" duration="persistent" attributeOrder="ent10#att29 ent10#att30" db:database="db2" db:table="workertaskstatus">
-    <Attribute id="ent10#att29" key="true" name="oid_worker" type="integer" db:column="oid_worker"/>
-    <Attribute id="ent10#att30" name="rewarded" type="boolean" db:column="rewarded"/>
+  <Entity gr:x="565" gr:y="315" id="ent10" name="WorkerTaskStatus" duration="persistent" attributeOrder="ent10#att29 ent10#att30 ent10#att24" db:database="db2" db:table="workertaskstatus">
+    <Attribute id="ent10#att29" key="true" name="oid_status" type="integer" db:column="oid_status"/>
+    <Attribute id="ent10#att30" name="done" type="boolean" db:column="done"/>
+    <Attribute id="ent10#att24" name="satisfactory" type="boolean" db:column="satisfactory"/>
   </Entity>
   <Relationship id="rel15" name="Worker_WorkerTaskStatus" sourceEntity="ent4" targetEntity="ent10" db:database="db2" db:table="workertaskstatus">
     <RelationshipRole1 id="rel15#role29" name="WorkerToWorkerTaskStatus" maxCard="N">
@@ -186,8 +189,7 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="MyDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/wse" username="postgres" cryptedPassword="true" password="cGFzc3dvcmQ=" schema="public">
-  </db:Database>
+  <db:Database id="db2" name="MyDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/wse" username="postgres" cryptedPassword="true" password="cGluZGFrYWFz" schema="public"/>
   <Relationship id="rel5" name="Annotation_Item" sourceEntity="ent6" targetEntity="ent3" db:database="db2" db:table="annotation">
     <RelationshipRole1 id="rel5#role9" name="AnnotationToItem" maxCard="1">
       <db:JoinColumn attribute="ent6#att17" name="oid_annotation"/>

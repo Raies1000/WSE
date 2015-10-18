@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="860" gr:y="640" id="sv1#area1#page19" name="View Campaign Tasks">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="865" gr:y="640" id="sv1#area1#page19" name="View Campaign Tasks">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page19#inu2" name="Task List" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att6" linkOrder="sv1#area1#page19#inu2#ln43 sv1#area1#page19#inu2#ln21 sv1#area1#page19#inu2#ln22 sv1#area1#page19#inu2#ln23 sv1#area1#page19#inu2#ln26 sv1#area1#page19#inu2#ln28">
       <Selector id="sv1#area1#page19#inu2#su15" defaultPolicy="fill" booleanOperator="and">

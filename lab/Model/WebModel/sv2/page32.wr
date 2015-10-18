@@ -1,0 +1,45 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page32" name="RegisterWorker" gr:x="420" gr:y="145">
+  <ContentUnits>
+    <EntryUnit id="sv2#page32#enu13" name="register" linkOrder="sv2#page32#enu13#ln48" gr:x="0" gr:y="0" fieldOrder="sv2#page32#enu13#fld44 sv2#page32#enu13#fld43 sv2#page32#enu13#fld42 sv2#page32#enu13#fld45 sv2#page32#enu13#fld46">
+      <Field id="sv2#page32#enu13#fld42" name="email" type="string" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld43" name="password" type="string" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld44" name="username" type="string" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld45" name="name" type="string" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld46" name="Birthday" type="date" modifiable="true"/>
+      <Link id="sv2#page32#enu13#ln48" name="Register" to="sv2#cru19" type="normal" validate="true">
+        <LinkParameter id="sv2#page32#enu13#ln48#par180" name="Accuracy score_AccuracyScore" target="sv2#cru19.ent4#att15" sourceValue="0"/>
+        <LinkParameter id="sv2#page32#enu13#ln48#par181" name="email_email" source="sv2#page32#enu13#fld42" target="sv2#cru19.email"/>
+        <LinkParameter id="sv2#page32#enu13#ln48#par182" name="name_Name" source="sv2#page32#enu13#fld45" target="sv2#cru19.ent4#att13"/>
+        <LinkParameter id="sv2#page32#enu13#ln48#par183" name="password_password" source="sv2#page32#enu13#fld43" target="sv2#cru19.password"/>
+        <LinkParameter id="sv2#page32#enu13#ln48#par184" name="username_userName" source="sv2#page32#enu13#fld44" target="sv2#cru19.userName"/>
+        <LinkParameter id="sv2#page32#enu13#ln48#par185" name="Birthday_BirthDate" source="sv2#page32#enu13#fld46" target="sv2#cru19.ent4#att14"/>
+        <LinkParameter id="sv2#page32#enu13#ln48#par186" name="2_Group.oid(defaultGroup)" target="sv2#cru19.User2DefaultGroup.groupOID" sourceValue="2"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page32#enu13">
+          <layout:Link link="sv2#page32#enu13#ln48"/>
+          <layout:Field field="sv2#page32#enu13#fld44"/>
+          <layout:Field field="sv2#page32#enu13#fld43"/>
+          <layout:Field field="sv2#page32#enu13#fld42"/>
+          <layout:Field field="sv2#page32#enu13#fld45"/>
+          <layout:Field field="sv2#page32#enu13#fld46"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

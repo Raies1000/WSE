@@ -1,13 +1,13 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-10" gr:y="-125" id="sv1#area1" name="RequesterArea" landmark="true" protected="true" landmarks="sv1#area1#page6 sv1#area1#page15 sv1#area1#page2" defaultPage="sv1#area1#page6">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-25" gr:y="-120" id="sv1#area1" name="RequesterArea" landmark="true" protected="true" landmarks="sv1#area1#page6 sv1#area1#page15 sv1#area1#page2 sv1#area1#lou1" defaultPage="sv1#area1#page6">
   <OperationUnits>
-    <CreateUnit gr:x="245" gr:y="740" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
+    <CreateUnit gr:x="250" gr:y="740" id="sv1#area1#cru4" name="CreateCampaign" entity="ent7">
       <OKLink id="sv1#area1#cru4#oln6" name="OKFlow6" to="sv1#area1#page6" automaticCoupling="true"/>
       <KOLink id="sv1#area1#cru4#kln4" name="KOFlow4" to="sv1#area1#page15" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="505" gr:y="620" id="sv1#area1#cru5" name="CreateItem" entity="ent3">
+    <CreateUnit gr:x="510" gr:y="620" id="sv1#area1#cru5" name="CreateItem" entity="ent3">
       <OKLink id="sv1#area1#cru5#oln7" name="OKFlow7" to="sv1#area1#page6" automaticCoupling="true"/>
     </CreateUnit>
-    <ConnectUnit id="sv1#area1#cnu5" name="Add Items to Task" gr:x="775" gr:y="270" relationship="rel1#role1">
+    <ConnectUnit id="sv1#area1#cnu5" name="Add Items to Task" gr:x="780" gr:y="270" relationship="rel1#role1">
       <SourceSelector id="sv1#area1#cnu5#su24" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu5#su24#kcond18" name="KeyCondition16" predicate="in" implied="false"/>
       </SourceSelector>
@@ -19,14 +19,14 @@
         <LinkParameter id="sv1#area1#cnu5#oln23#par152" name="0_AttCondition9" sourceValue="0" target="sv1#area1#page18#mciu4#su32#acond9"/>
       </OKLink>
     </ConnectUnit>
-    <CreateUnit gr:x="780" gr:y="135" id="sv1#area1#cru8" name="Create Task" entity="ent1">
+    <CreateUnit gr:x="785" gr:y="135" id="sv1#area1#cru8" name="Create Task" entity="ent1">
       <OKLink id="sv1#area1#cru8#oln22" name="OKFlow22" to="sv1#area1#page18#mciu3">
         <LinkParameter id="sv1#area1#cru8#oln22#par139" name="oid_campaign_PASSING_oid_campaign" sourceLinkParameter="sv1#area1#page18#enu9#ln60#par138" target="sv1#area1#page18#mciu3#su23#acond4"/>
         <LinkParameter id="sv1#area1#cru8#oln22#par140" name="oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page18#enu9#ln60#par138" passing="true"/>
         <LinkParameter id="sv1#area1#cru8#oln22#par141" name="oid_task_PASSING" source="ent1#att1Array" passing="true"/>
       </OKLink>
     </CreateUnit>
-    <ConnectUnit gr:x="775" gr:y="415" id="sv1#area1#cnu6" name="Connect Task to Worker" relationship="rel4#role8">
+    <ConnectUnit gr:x="780" gr:y="415" id="sv1#area1#cnu6" name="Connect Task to Worker" relationship="rel4#role8">
       <SourceSelector id="sv1#area1#cnu6#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu6#su28#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
       </SourceSelector>
@@ -37,16 +37,17 @@
         <LinkParameter id="sv1#area1#cnu6#oln25#par154" name="false_rewarded" sourceValue="false" target="sv1#area1#cru10.ent10#att30"/>
         <LinkParameter id="sv1#area1#cnu6#oln25#par155" name="Source oid_task [Task]_Task.oid_task(WorkerTaskStatusToTask)" source="sourceent1#att1" target="sv1#area1#cru10.rel16#role31.ent1#att1"/>
         <LinkParameter id="sv1#area1#cnu6#oln25#par156" name="Target oid [Worker]_Worker.oid(WorkerTaskStatusToWorker)" target="sv1#area1#cru10.rel15#role30.userOID" sourceLinkParameter="sv1#area1#page18#mciu4#ln62#par157"/>
+        <LinkParameter id="sv1#area1#cnu6#oln25#par313" name="false_satisfactory" sourceValue="false" target="sv1#area1#cru10.ent10#att24"/>
       </OKLink>
     </ConnectUnit>
-    <CreateUnit gr:x="935" gr:y="140" id="sv1#area1#cru10" name="Create WorkerTaskStatus" entity="ent10" bulk="true">
+    <CreateUnit gr:x="940" gr:y="140" id="sv1#area1#cru10" name="Create WorkerTaskStatus" entity="ent10" bulk="true">
       <OKLink id="sv1#area1#cru10#oln27" name="OKFlow27" to="sv1#area1#page6" automaticCoupling="true" gr:bendpoints="-282,-183,573,-148;-673,-183,182,-148"/>
     </CreateUnit>
-    <CreateUnit gr:x="875" gr:y="870" id="sv1#area1#cru6" name="Create Skill" entity="ent2">
+    <CreateUnit gr:x="880" gr:y="870" id="sv1#area1#cru6" name="Create Skill" entity="ent2">
       <KOLink id="sv1#area1#cru6#kln1" name="KOFlow1" to="sv1#area1#page3" automaticCoupling="true"/>
       <OKLink id="sv1#area1#cru6#oln1" name="OKFlow1" to="sv1#area1#page2#inu3" automaticCoupling="true"/>
     </CreateUnit>
-    <ConnectUnit gr:x="1385" gr:y="705" id="sv1#area1#cnu1" name="Connect Items to Task" relationship="rel1#role1">
+    <ConnectUnit gr:x="1390" gr:y="705" id="sv1#area1#cnu1" name="Connect Items to Task" relationship="rel1#role1">
       <SourceSelector id="sv1#area1#cnu1#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu1#su2#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </SourceSelector>
@@ -55,7 +56,7 @@
       </TargetSelector>
       <OKLink id="sv1#area1#cnu1#oln9" name="OKFlow9" to="sv1#area1#page12#pwu7" automaticCoupling="true"/>
     </ConnectUnit>
-    <ConnectUnit gr:x="1440" gr:y="965" id="sv1#area1#cnu3" name="Connect Skills to Task" relationship="rel6#role11">
+    <ConnectUnit gr:x="1445" gr:y="965" id="sv1#area1#cnu3" name="Connect Skills to Task" relationship="rel6#role11">
       <SourceSelector id="sv1#area1#cnu3#su11" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu3#su11#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </SourceSelector>
@@ -64,7 +65,7 @@
       </TargetSelector>
       <OKLink id="sv1#area1#cnu3#oln10" name="OKFlow10" to="sv1#area1#page22#pwu9" automaticCoupling="true"/>
     </ConnectUnit>
-    <ConnectUnit gr:x="970" gr:y="1385" id="sv1#area1#cnu4" name="Connect Workers to Task" relationship="rel4#role7">
+    <ConnectUnit gr:x="975" gr:y="1385" id="sv1#area1#cnu4" name="Connect Workers to Task" relationship="rel4#role7">
       <SourceSelector id="sv1#area1#cnu4#su22" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu4#su22#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </SourceSelector>
@@ -73,23 +74,154 @@
       </TargetSelector>
       <OKLink id="sv1#area1#cnu4#oln11" name="OKFlow11" to="sv1#area1#page24#pwu6" automaticCoupling="true"/>
     </ConnectUnit>
-    <ModifyUnit gr:x="485" gr:y="1460" id="sv1#area1#mfu1" name="RewardWorker" entity="ent5" customDescriptor="false">
+    <ModifyUnit gr:x="15" gr:y="1600" id="sv1#area1#mfu1" name="RewardWorker" entity="ent5" customDescriptor="false">
       <Selector id="sv1#area1#mfu1#su35" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#area1#mfu1#su35#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+        <KeyCondition id="sv1#area1#mfu1#su35#kcond9" name="piggyKey" predicate="in" implied="false"/>
       </Selector>
+      <OKLink id="sv1#area1#mfu1#oln32" name="OKFlow32" to="sv1#area1#mathu1">
+        <LinkParameter id="sv1#area1#mfu1#oln32#par296" name="Budget_PASSING_Budget" sourceLinkParameter="sv1#area1#mathu2#oln30#par295" target="sv1#area1#mathu1#mathv4"/>
+        <LinkParameter id="sv1#area1#mfu1#oln32#par297" name="Reward_PASSING_Reward" sourceLinkParameter="sv1#area1#mathu2#oln30#par290" target="sv1#area1#mathu1#mathv5"/>
+        <LinkParameter id="sv1#area1#mfu1#oln32#par298" name="oid_PASSING" sourceLinkParameter="sv1#area1#mathu2#oln30#par288" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu1#oln32#par299" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#mathu2#oln30#par289" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu1#oln32#par300" name="tasksDone_PASSING" sourceLinkParameter="sv1#area1#mathu2#oln30#par291" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu1#oln32#par301" name="tasksSatisfied_PASSING" sourceLinkParameter="sv1#area1#mathu2#oln30#par292" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu1#oln32#par302" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mathu2#oln30#par293" passing="true"/>
+      </OKLink>
     </ModifyUnit>
-    <MathUnit gr:x="295" gr:y="1420" id="sv1#area1#mathu2" name="Calculate new balance" resultType="integer" defaultExpression="Balance + Reward">
+    <MathUnit gr:x="0" gr:y="1455" id="sv1#area1#mathu2" name="Calculate new balance" resultType="integer" defaultExpression="Balance + Reward">
       <MathVariable id="sv1#area1#mathu2#mathv2" name="Reward"/>
       <MathVariable id="sv1#area1#mathu2#mathv3" name="Balance"/>
-      <Link id="sv1#area1#mathu2#ln33" name="Flow33" to="sv1#area1#mfu1" type="transport" validate="true">
-        <LinkParameter id="sv1#area1#mathu2#ln33#par122" name="Result_Balance" source="result" target="sv1#area1#mfu1.ent5#att25"/>
-        <LinkParameter id="sv1#area1#mathu2#ln33#par124" name="Budget_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par119" passing="true"/>
-        <LinkParameter id="sv1#area1#mathu2#ln33#par125" name="oid_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par96" passing="true"/>
-        <LinkParameter id="sv1#area1#mathu2#ln33#par126" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par99" passing="true"/>
-        <LinkParameter id="sv1#area1#mathu2#ln33#par127" name="Reward_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par95" passing="true"/>
-        <LinkParameter id="sv1#area1#mathu2#ln33#par129" name="WorkerToPiggyBank.oid_bank_PASSING_KeyCondition9 [oid_bank]" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par128" target="sv1#area1#mfu1#su35#kcond9.ent5#att16"/>
-        <LinkParameter id="sv1#area1#mathu2#ln33#par131" name="WorkerToPiggyBank.oid_bank_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln31#par128" passing="true"/>
-      </Link>
+      <OKLink id="sv1#area1#mathu2#oln30" name="OKFlow30" to="sv1#area1#mfu1">
+        <LinkParameter id="sv1#area1#mathu2#oln30#par243" name="Result_Balance" source="result" target="sv1#area1#mfu1.ent5#att25"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par287" name="WorkerToPiggyBank.oid_bank_PASSING_piggyKey [oid_bank]" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par286" target="sv1#area1#mfu1#su35#kcond9.ent5#att16"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par288" name="oid_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par277" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par289" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par278" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par290" name="Reward_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par279" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par291" name="tasksDone_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par280" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par292" name="tasksSatisfied_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par281" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par293" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par282" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par294" name="oid_PASSING_Worker.oid(PiggyBankToWorker)" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par277" target="sv1#area1#mfu1.rel3#role6.userOID"/>
+        <LinkParameter id="sv1#area1#mathu2#oln30#par295" name="Budget_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln14#par276" passing="true"/>
+      </OKLink>
     </MathUnit>
+    <LogoutUnit gr:x="10" gr:y="2025" id="sv1#area1#lou1" name="LogOut" siteView="sv2" landmark="true"/>
+    <MathUnit gr:x="0" gr:y="1740" id="sv1#area1#mathu1" name="Calculate new budget" resultType="integer" defaultExpression="Budget - Reward">
+      <OKLink id="sv1#area1#mathu1#oln35" name="OKFlow32" to="sv1#area1#mfu4">
+        <LinkParameter id="sv1#area1#mathu1#oln35#par274" name="Result_Budget" source="result" target="sv1#area1#mfu4.ent7#att22"/>
+        <LinkParameter id="sv1#area1#mathu1#oln35#par303" name="TaskToAnnotationCampain.oid_campaign_PASSING_KeyCondition14 [oid_campaign]" sourceLinkParameter="sv1#area1#mfu1#oln32#par302" target="sv1#area1#mfu4#su48#kcond14.ent7#att20"/>
+        <LinkParameter id="sv1#area1#mathu1#oln35#par304" name="oid_PASSING" sourceLinkParameter="sv1#area1#mfu1#oln32#par298" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu1#oln35#par305" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#mfu1#oln32#par299" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu1#oln35#par306" name="tasksDone_PASSING" sourceLinkParameter="sv1#area1#mfu1#oln32#par300" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu1#oln35#par307" name="tasksSatisfied_PASSING" sourceLinkParameter="sv1#area1#mfu1#oln32#par301" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu1#oln35#par308" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mfu1#oln32#par302" passing="true"/>
+      </OKLink>
+      <MathVariable id="sv1#area1#mathu1#mathv4" name="Budget"/>
+      <MathVariable id="sv1#area1#mathu1#mathv5" name="Reward"/>
+    </MathUnit>
+    <ModifyUnit gr:x="5" gr:y="1890" id="sv1#area1#mfu4" name="Subtract from budget" entity="ent7">
+      <Selector id="sv1#area1#mfu4#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#mfu4#su48#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area1#mfu4#oln2" name="OKFlow2" to="sv1#area1#mathu6">
+        <LinkParameter id="sv1#area1#mfu4#oln2#par5" name="tasksSatisfied_PASSING_TasksSatisfied" sourceLinkParameter="sv1#area1#mathu1#oln35#par307" target="sv1#area1#mathu6#mathv6"/>
+        <LinkParameter id="sv1#area1#mfu4#oln2#par6" name="oid_PASSING" sourceLinkParameter="sv1#area1#mathu1#oln35#par304" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu4#oln2#par7" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#mathu1#oln35#par305" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu4#oln2#par8" name="tasksDone_PASSING" sourceLinkParameter="sv1#area1#mathu1#oln35#par306" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu4#oln2#par9" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mathu1#oln35#par308" passing="true"/>
+      </OKLink>
+    </ModifyUnit>
+    <SelectorUnit gr:x="230" gr:y="1465" id="sv1#area1#seu4" name="Select WorkerTaskStatus" entity="ent10" distinctAttributes="ent10#att30">
+      <Selector id="sv1#area1#seu4#su53" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area1#seu4#su53#rcond36" name="WorkerToWorkerTaskStatus" predicate="in" implied="false" role="rel16#role32"/>
+        <RelationshipRoleCondition id="sv1#area1#seu4#su53#rcond37" name="WorkerTaskStatusToWorker" predicate="in" implied="false" role="rel15#role29"/>
+      </Selector>
+    </SelectorUnit>
+    <MathUnit gr:x="495" gr:y="1765" id="sv1#area1#mathu3" name="Calculate Accuracy" resultType="integer" defaultExpression="(TasksSatisfied / TasksDone) * 100">
+      <OKLink id="sv1#area1#mathu3#oln14" name="OKFlow14" to="sv1#area1#mfu2">
+        <LinkParameter id="sv1#area1#mathu3#oln14#par263" name="Result_AccuracyScore" source="result" target="sv1#area1#mfu2.ent4#att15"/>
+        <LinkParameter id="sv1#area1#mathu3#oln14#par28" name="oid_PASSING_worker_oid [oid]" sourceLinkParameter="sv1#area1#mfu6#oln19#par25" target="sv1#area1#mfu2#su8#kcond4.userOID"/>
+        <LinkParameter id="sv1#area1#mathu3#oln14#par29" name="oid_PASSING" sourceLinkParameter="sv1#area1#mfu6#oln19#par25" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu3#oln14#par30" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#mfu6#oln19#par26" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu3#oln14#par31" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mfu6#oln19#par27" passing="true"/>
+      </OKLink>
+      <MathVariable id="sv1#area1#mathu3#mathv9" name="TasksDone"/>
+      <MathVariable id="sv1#area1#mathu3#mathv10" name="TasksSatisfied"/>
+    </MathUnit>
+    <ModifyUnit gr:x="510" gr:y="1890" id="sv1#area1#mfu2" name="Update Accuracy" entity="ent4">
+      <Selector id="sv1#area1#mfu2#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#mfu2#su8#kcond4" name="worker_oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area1#mfu2#oln20" name="OKFlow20" to="sv1#area1#page19#inu2" gr:bendpoints="312,-304,-138,921;352,-598,-98,627;351,-857,-99,368;417,-972,-33,253">
+        <LinkParameter id="sv1#area1#mfu2#oln20#par76" name="TaskToAnnotationCampain.oid_campaign_PASSING_oid_campaign" sourceLinkParameter="sv1#area1#mathu3#oln14#par31" target="sv1#area1#page19#inu2#su15#acond2"/>
+      </OKLink>
+    </ModifyUnit>
+    <MathUnit gr:x="265" gr:y="2025" id="sv1#area1#mathu6" name="Calculate TasksSatisfied" resultType="integer" defaultExpression="TasksSatisfied + 1">
+      <OKLink id="sv1#area1#mathu6#oln5" name="OKFlow5" to="sv1#area1#mathu7">
+        <LinkParameter id="sv1#area1#mathu6#oln5#par247" name="Result_PASSING" source="result" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu6#oln5#par10" name="tasksDone_PASSING_TasksDone" sourceLinkParameter="sv1#area1#mfu4#oln2#par8" target="sv1#area1#mathu7#mathv8"/>
+        <LinkParameter id="sv1#area1#mathu6#oln5#par11" name="oid_PASSING" sourceLinkParameter="sv1#area1#mfu4#oln2#par6" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu6#oln5#par12" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#mfu4#oln2#par7" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu6#oln5#par13" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mfu4#oln2#par9" passing="true"/>
+      </OKLink>
+      <MathVariable id="sv1#area1#mathu6#mathv6" name="TasksSatisfied"/>
+    </MathUnit>
+    <ModifyUnit gr:x="250" gr:y="1765" id="sv1#area1#mfu6" name="Update Worker" entity="ent4">
+      <Selector id="sv1#area1#mfu6#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#mfu6#su16#kcond23" name="worker_oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area1#mfu6#oln19" name="OKFlow19" to="sv1#area1#mathu3">
+        <LinkParameter id="sv1#area1#mfu6#oln19#par258" name="Result_PASSING_TasksDone" sourceLinkParameter="sv1#area1#mathu7#oln18#par255" target="sv1#area1#mathu3#mathv9"/>
+        <LinkParameter id="sv1#area1#mfu6#oln19#par259" name="Result_PASSING_TasksSatisfied" sourceLinkParameter="sv1#area1#mathu7#oln18#par256" target="sv1#area1#mathu3#mathv10"/>
+        <LinkParameter id="sv1#area1#mfu6#oln19#par25" name="oid_PASSING" sourceLinkParameter="sv1#area1#mathu7#oln18#par19" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu6#oln19#par26" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#mathu7#oln18#par20" passing="true"/>
+        <LinkParameter id="sv1#area1#mfu6#oln19#par27" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mathu7#oln18#par23" passing="true"/>
+      </OKLink>
+    </ModifyUnit>
+    <MathUnit gr:x="260" gr:y="1900" id="sv1#area1#mathu7" name="Calculate TaskDone" resultType="integer" defaultExpression="TasksDone + 1">
+      <MathVariable id="sv1#area1#mathu7#mathv8" name="TasksDone"/>
+      <OKLink id="sv1#area1#mathu7#oln18" name="OKFlow18" to="sv1#area1#mfu6">
+        <LinkParameter id="sv1#area1#mathu7#oln18#par250" name="Result_tasksDone" source="result" target="sv1#area1#mfu6.ent4#att26"/>
+        <LinkParameter id="sv1#area1#mathu7#oln18#par251" name="Result_PASSING_tasksSatisfied" sourceLinkParameter="sv1#area1#mathu6#oln5#par247" target="sv1#area1#mfu6.ent4#att27"/>
+        <LinkParameter id="sv1#area1#mathu7#oln18#par255" name="Result_PASSING" source="result" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu7#oln18#par256" name="Result_PASSING" sourceLinkParameter="sv1#area1#mathu6#oln5#par247" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu7#oln18#par18" name="oid_PASSING_worker_oid [oid]" sourceLinkParameter="sv1#area1#mathu6#oln5#par11" target="sv1#area1#mfu6#su16#kcond23.userOID"/>
+        <LinkParameter id="sv1#area1#mathu7#oln18#par19" name="oid_PASSING" sourceLinkParameter="sv1#area1#mathu6#oln5#par11" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu7#oln18#par20" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#mathu6#oln5#par12" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu7#oln18#par23" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mathu6#oln5#par13" passing="true"/>
+      </OKLink>
+    </MathUnit>
+    <ModifyUnit gr:x="510" gr:y="1030" id="sv1#area1#mfu8" name="Close Campaign" entity="ent7">
+      <Selector id="sv1#area1#mfu8#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#mfu8#su18#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <MathUnit gr:x="900" gr:y="1865" id="sv1#area1#mathu4" name="Calculate TasksDone" resultType="integer" defaultExpression="TasksDone + 1">
+      <MathVariable id="sv1#area1#mathu4#mathv1" name="TasksDone"/>
+      <OKLink id="sv1#area1#mathu4#oln16" name="OKFlow16" to="sv1#area1#mathu8">
+        <LinkParameter id="sv1#area1#mathu4#oln16#par40" name="Result_TasksDone" source="result" target="sv1#area1#mathu8#mathv7"/>
+        <LinkParameter id="sv1#area1#mathu4#oln16#par41" name="tasksSatisfied_PASSING_TasksSatisfied" sourceLinkParameter="sv1#area1#page24#pwu6#ln4#par39" target="sv1#area1#mathu8#mathv11"/>
+        <LinkParameter id="sv1#area1#mathu4#oln16#par42" name="oid_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln4#par34" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu4#oln16#par44" name="Result_PASSING" source="result" passing="true"/>
+        <LinkParameter id="sv1#area1#mathu4#oln16#par49" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page24#pwu6#ln4#par48" passing="true"/>
+      </OKLink>
+    </MathUnit>
+    <MathUnit gr:x="980" gr:y="2015" id="sv1#area1#mathu8" name="Calculate Accuracy" resultType="integer" defaultExpression="(TasksSatisfied / TasksDone) * 100">
+      <OKLink id="sv1#area1#mathu8#oln12" name="OKFlow12" to="sv1#area1#mfu7">
+        <LinkParameter id="sv1#area1#mathu8#oln12#par45" name="Result_AccuracyScore" source="result" target="sv1#area1#mfu7.ent4#att15"/>
+        <LinkParameter id="sv1#area1#mathu8#oln12#par46" name="oid_PASSING_KeyCondition12 [oid]" sourceLinkParameter="sv1#area1#mathu4#oln16#par42" target="sv1#area1#mfu7#su9#kcond12.userOID"/>
+        <LinkParameter id="sv1#area1#mathu8#oln12#par47" name="Result_PASSING_tasksDone" sourceLinkParameter="sv1#area1#mathu4#oln16#par44" target="sv1#area1#mfu7.ent4#att26"/>
+        <LinkParameter id="sv1#area1#mathu8#oln12#par52" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#mathu4#oln16#par49" passing="true"/>
+      </OKLink>
+      <MathVariable id="sv1#area1#mathu8#mathv7" name="TasksDone"/>
+      <MathVariable id="sv1#area1#mathu8#mathv11" name="TasksSatisfied"/>
+    </MathUnit>
+    <ModifyUnit gr:x="1145" gr:y="1850" id="sv1#area1#mfu7" name="Update Accuracy" entity="ent4">
+      <Selector id="sv1#area1#mfu7#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#mfu7#su9#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area1#mfu7#oln13" name="OKFlow13" to="sv1#area1#page19#inu2" gr:bendpoints="-27,-585,158,590;-27,-759,158,416">
+        <LinkParameter id="sv1#area1#mfu7#oln13#par75" name="TaskToAnnotationCampain.oid_campaign_PASSING_oid_campaign" sourceLinkParameter="sv1#area1#mathu8#oln12#par52" target="sv1#area1#page19#inu2#su15#acond2"/>
+      </OKLink>
+    </ModifyUnit>
   </OperationUnits>
 </Area>

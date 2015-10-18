@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="940" gr:y="1155" id="sv1#area1#page23" name="Add Workers to Task">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="945" gr:y="1155" id="sv1#area1#page23" name="Add Workers to Task">
   <ContentUnits>
     <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page23#mciu6" name="Workers" entity="ent4" linkOrder="sv1#area1#page23#mciu6#ln29" displayAttributes="email ent4#att13 ent4#att15">
       <Link id="sv1#area1#page23#mciu6#ln29" name="Add Workers" to="sv1#area1#cnu4" type="normal" validate="true">

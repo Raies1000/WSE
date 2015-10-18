@@ -1,9 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="25" gr:y="0" id="sv1#area1#page6" name="RequesterHome" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="0" id="sv1#area1#page6" name="RequesterHome" landmark="true">
   <ContentUnits>
     <MultiMessageUnit gr:x="5" gr:y="5" id="sv1#area1#page6#mssu6" name="homemsg">
       <Message xml:space="preserve">requester's home</Message>
     </MultiMessageUnit>
-    <IndexUnit gr:x="0" gr:y="150" id="sv1#area1#page6#inu1" name="Campaigns List" entity="ent7" displayAttributes="ent7#att21 ent7#att23 ent7#att22" linkOrder="sv1#area1#page6#inu1#ln36 sv1#area1#page6#inu1#ln38 sv1#area1#page6#inu1#ln40">
+    <IndexUnit gr:x="0" gr:y="150" id="sv1#area1#page6#inu1" name="Campaigns List" entity="ent7" displayAttributes="ent7#att21 ent7#att23 ent7#att22" linkOrder="sv1#area1#page6#inu1#ln36 sv1#area1#page6#inu1#ln38 sv1#area1#page6#inu1#ln40 sv1#area1#page6#inu1#ln13">
       <Selector id="sv1#area1#page6#inu1#su14" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page6#inu1#su14#acond1" name="oid" predicate="eq" booleanOperator="or" implied="false" attributes="rel9#role18.userOID"/>
       </Selector>
@@ -16,6 +16,10 @@
       <Link id="sv1#area1#page6#inu1#ln40" name="View Campaign" to="sv1#area1#page19#inu2" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page6#inu1#ln40#par72" name="oid_campaign_oid_campaign" source="data[].ent7#att20" target="sv1#area1#page19#inu2#su15#acond2"/>
         <LinkParameter id="sv1#area1#page6#inu1#ln40#par117" name="Budget_PASSING" source="data[].ent7#att22" passing="true"/>
+      </Link>
+      <Link id="sv1#area1#page6#inu1#ln13" name="Close Campaign" to="sv1#area1#mfu8" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page6#inu1#ln13#par271" name="oid_campaign_KeyCondition24 [oid_campaign]" source="data[].ent7#att20" target="sv1#area1#mfu8#su18#kcond24.ent7#att20"/>
+        <LinkParameter id="sv1#area1#page6#inu1#ln13#par272" name="TRUE_Status" sourceValue="TRUE" target="sv1#area1#mfu8.ent7#att23"/>
       </Link>
     </IndexUnit>
     <GetUnit gr:x="130" gr:y="0" id="sv1#area1#page6#gtu3" name="Get3" contextParameters="UserCtxParam">
@@ -44,12 +48,13 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page6#inu1">
-          <layout:Link link="sv1#area1#page6#inu1#ln36"/>
-          <layout:Link link="sv1#area1#page6#inu1#ln38"/>
-          <layout:Link link="sv1#area1#page6#inu1#ln40"/>
           <layout:Attribute attribute="ent7#att21"/>
           <layout:Attribute attribute="ent7#att23"/>
           <layout:Attribute attribute="ent7#att22"/>
+          <layout:Link link="sv1#area1#page6#inu1#ln36"/>
+          <layout:Link link="sv1#area1#page6#inu1#ln38"/>
+          <layout:Link link="sv1#area1#page6#inu1#ln40"/>
+          <layout:Link link="sv1#area1#page6#inu1#ln13"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page35" name="My Skills" linkOrder="sv3#area3#page35#ln56" landmark="true" gr:x="420" gr:y="145">
+  <ContentUnits>
+    <IndexUnit id="sv3#area3#page35#inu4" name="My Skills" gr:x="140" gr:y="0" entity="ent2" displayAttributes="ent2#att28">
+      <Selector id="sv3#area3#page35#inu4#su36" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area3#page35#inu4#su36#acond6" name="Worker Skills" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role4.userOID"/>
+      </Selector>
+    </IndexUnit>
+    <GetUnit id="sv3#area3#page35#gtu9" name="GetUserID" gr:x="0" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="sv3#area3#page35#gtu9#ln55" name="Flow18" to="sv3#area3#page35#inu4" type="transport" validate="true">
+        <LinkParameter id="sv3#area3#page35#gtu9#ln55#par209" name="UserCtxParam.oid_Worker Skills" source="sv3#area3#page35#gtu9.UserCtxParam" target="sv3#area3#page35#inu4#su36#acond6"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page35#inu4">
+          <layout:Attribute attribute="ent2#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#area3#page35#ln56" name="Add Skills" to="sv3#area3#page36" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

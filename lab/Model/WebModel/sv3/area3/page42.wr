@@ -1,0 +1,175 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page42" name="WorkerHome" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area3#page42#pwu13" name="Tasks" linkOrder="sv3#area3#page42#pwu13#ln67 sv3#area3#page42#pwu13#ln68" gr:x="80" gr:y="350" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
+      <Selector id="sv3#area3#page42#pwu13#su42" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area3#page42#pwu13#su42#rcond24" name="RoleCondition4" predicate="in" implied="false" role="rel4#role7"/>
+        <AttributesCondition id="sv3#area3#page42#pwu13#su42#acond14" name="Open Campaigns" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role16.ent7#att23" value="false"/>
+      </Selector>
+      <Link id="sv3#area3#page42#pwu13#ln67" name="View Completed Items of Task" to="sv3#area3#page39#pwu11" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page42#pwu13#ln67#par225" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+        <LinkParameter id="sv3#area3#page42#pwu13#ln67#par226" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv3#area3#page42#gtu12#ln69#par231" passing="true"/>
+        <LinkParameter id="sv3#area3#page42#pwu13#ln67#par227" name="oid_task_Items Of Task [oid_task]" source="data[].ent1#att1" target="sv3#area3#page39#pwu11#su40#rcond20.ent1#att1"/>
+      </Link>
+      <Link id="sv3#area3#page42#pwu13#ln68" name="View Pending Tasks" to="sv3#area3#page37#pwu10" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page42#pwu13#ln68#par228" name="oid_task_RoleCondition1 [oid_task]" source="data[].ent1#att1" target="sv3#area3#page37#pwu10#su38#rcond15.ent1#att1"/>
+        <LinkParameter id="sv3#area3#page42#pwu13#ln68#par229" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <GetUnit id="sv3#area3#page42#gtu12" name="GetUserID" gr:x="0" gr:y="215" contextParameters="UserCtxParam">
+      <Link id="sv3#area3#page42#gtu12#ln69" name="Flow19" to="sv3#area3#page42#pwu13" type="transport" validate="true">
+        <LinkParameter id="sv3#area3#page42#gtu12#ln69#par230" name="UserCtxParam.oid_RoleCondition4 [oid]" source="sv3#area3#page42#gtu12.UserCtxParam" target="sv3#area3#page42#pwu13#su42#rcond24.userOID"/>
+        <LinkParameter id="sv3#area3#page42#gtu12#ln69#par231" name="UserCtxParam.oid_PASSING" source="sv3#area3#page42#gtu12.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv3#area3#page42#gtu12#ln70" name="Flow44" to="sv3#area3#page42#pwu14" type="transport" validate="true" gr:bendpoints="-102,137,-77,-138">
+        <LinkParameter id="sv3#area3#page42#gtu12#ln70#par232" name="UserCtxParam.oid_RoleCondition8 [oid]" source="sv3#area3#page42#gtu12.UserCtxParam" target="sv3#area3#page42#pwu14#su43#rcond27.userOID"/>
+        <LinkParameter id="sv3#area3#page42#gtu12#ln70#par233" name="UserCtxParam.oid_PASSING" source="sv3#area3#page42#gtu12.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv3#area3#page42#gtu12#ln74" name="Flow74" to="sv3#area3#page42#seu3" type="transport" validate="true">
+        <LinkParameter id="sv3#area3#page42#gtu12#ln74#par284" name="UserCtxParam.oid_Worker condition [oid]" source="sv3#area3#page42#gtu12.UserCtxParam" target="sv3#area3#page42#seu3#su51#rcond35.userOID"/>
+      </Link>
+      <Link id="sv3#area3#page42#gtu12#ln76" name="worker_oid_flow" to="sv3#area3#page42#dau5" type="transport" validate="true">
+        <LinkParameter id="sv3#area3#page42#gtu12#ln76#par285" name="UserCtxParam.oid_KeyCondition16 [oid]" source="sv3#area3#page42#gtu12.UserCtxParam" target="sv3#area3#page42#dau5#su52#kcond16.userOID"/>
+      </Link>
+    </GetUnit>
+    <PowerIndexUnit id="sv3#area3#page42#pwu14" name="Task History" linkOrder="sv3#area3#page42#pwu14#ln72" gr:x="75" gr:y="495" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3">
+      <Selector id="sv3#area3#page42#pwu14#su43" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area3#page42#pwu14#su43#rcond27" name="RoleCondition8" predicate="in" implied="false" role="rel4#role7"/>
+        <AttributesCondition id="sv3#area3#page42#pwu14#su43#acond15" name="Closed Campaigns" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role16.ent7#att23" value="true"/>
+      </Selector>
+      <Link id="sv3#area3#page42#pwu14#ln72" name="View Task" to="sv3#area3#page41#pwu12" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page42#pwu14#ln72#par235" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv3#area3#page42#gtu12#ln70#par233" passing="true"/>
+        <LinkParameter id="sv3#area3#page42#pwu14#ln72#par236" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+        <LinkParameter id="sv3#area3#page42#pwu14#ln72#par237" name="oid_task_Items Of Task [oid_task]" source="data[].ent1#att1" target="sv3#area3#page41#pwu12#su41#rcond23.ent1#att1"/>
+      </Link>
+    </PowerIndexUnit>
+    <DataUnit gr:x="195" gr:y="240" id="sv3#area3#page42#dau4" name="Balance" entity="ent5" displayAttributes="ent5#att25">
+      <Selector id="sv3#area3#page42#dau4#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area3#page42#dau4#su50#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <SelectorUnit gr:x="175" gr:y="120" id="sv3#area3#page42#seu3" name="Select Piggy" entity="ent5" distinctAttributes="ent5#att16">
+      <Selector id="sv3#area3#page42#seu3#su51" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area3#page42#seu3#su51#rcond35" name="Worker condition" role="rel3#role5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area3#page42#seu3#ln75" name="Flow75" to="sv3#area3#page42#dau4" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <DataUnit gr:x="55" gr:y="0" id="sv3#area3#page42#dau5" name="Worker" entity="ent4" displayAttributes="ent4#att13 ent4#att14 ent4#att15 email">
+      <Selector id="sv3#area3#page42#dau5#su52" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area3#page42#dau5#su52#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page42#dau4">
+          <layout:Attribute attribute="ent5#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page42#dau5">
+          <layout:Attribute attribute="ent4#att13"/>
+          <layout:Attribute attribute="ent4#att14"/>
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Attribute attribute="email"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page42#pwu13">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Link link="sv3#area3#page42#pwu13#ln67"/>
+          <layout:Link link="sv3#area3#page42#pwu13#ln68"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page42#pwu14">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Link link="sv3#area3#page42#pwu14#ln72"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

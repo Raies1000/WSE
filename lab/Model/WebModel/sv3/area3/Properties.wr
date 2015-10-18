@@ -1,0 +1,26 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area3" name="WorkerArea" defaultPage="sv3#area3#page42" landmarks="sv3#area3#page35 sv3#area3#lou2" landmark="true" protected="true" gr:x="0" gr:y="-40">
+  <OperationUnits>
+    <ConnectUnit id="sv3#area3#cnu7" name="Connect Skill to Worker" gr:x="1015" gr:y="180" relationship="rel2#role4">
+      <SourceSelector id="sv3#area3#cnu7#su21" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area3#cnu7#su21#kcond10" name="KeyCondition3" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv3#area3#cnu7#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area3#cnu7#su31#kcond11" name="KeyCondition4" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv3#area3#cnu7#oln28" name="OKFlow2" to="sv3#area3#page35" automaticCoupling="true" gr:bendpoints="-113,-207,392,-192;-478,-206,-3,-191"/>
+      <KOLink id="sv3#area3#cnu7#kln9" name="KOFlow5" to="sv3#area3#page36" automaticCoupling="true"/>
+    </ConnectUnit>
+    <GetUnit id="sv3#area3#gtu4" name="GetuserID" gr:x="1035" gr:y="30" contextParameters="UserCtxParam">
+      <Link id="sv3#area3#gtu4#ln53" name="Flow13" to="sv3#area3#cnu7" type="transport" validate="true">
+        <LinkParameter id="sv3#area3#gtu4#ln53#par206" name="UserCtxParam.oid_PASSING" source="sv3#area3#gtu4.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv3#area3#gtu4#ln53#par207" name="UserCtxParam.oid_KeyCondition4 [oid] [Worker] [Target]" source="sv3#area3#gtu4.UserCtxParam" target="sv3#area3#cnu7#su31#kcond11.userOID"/>
+      </Link>
+    </GetUnit>
+    <CreateUnit id="sv3#area3#cru22" name="Item Annotation" gr:x="1070" gr:y="475" entity="ent6">
+      <OKLink id="sv3#area3#cru22#oln29" name="OKFlow8" to="sv3#area3#page37#pwu10" gr:bendpoints="-1,-90,469,0">
+        <LinkParameter id="sv3#area3#cru22#oln29#par208" name="oid_task_PASSING_RoleCondition1 [oid_task]" sourceLinkParameter="sv3#area3#page40#enu16#ln64#par221" target="sv3#area3#page37#pwu10#su38#rcond15.ent1#att1"/>
+      </OKLink>
+    </CreateUnit>
+    <LogoutUnit id="sv3#area3#lou2" name="LogOut" landmark="true" gr:x="10" gr:y="960" siteView="sv2"/>
+  </OperationUnits>
+</Area>
