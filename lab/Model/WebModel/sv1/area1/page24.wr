@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="715" gr:y="1185" id="sv1#area1#page24" name="View Workers of Task">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page24#pwu6" name="Workers" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="email ent4#att13 ent4#att14 ent4#att15 rel3#role5.ent5#att25" linkOrder="sv1#area1#page24#pwu6#ln30 sv1#area1#page24#pwu6#ln14 sv1#area1#page24#pwu6#ln4">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page24#pwu6" name="Workers" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att13 ent4#att14 ent4#att15 rel3#role5.ent5#att25 email" linkOrder="sv1#area1#page24#pwu6#ln30 sv1#area1#page24#pwu6#ln14 sv1#area1#page24#pwu6#ln4">
       <Selector id="sv1#area1#page24#pwu6#su6" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page24#pwu6#su6#rcond14" name="Worker of Task" predicate="in" implied="false" role="rel4#role8"/>
         <RelationshipRoleCondition id="sv1#area1#page24#pwu6#su6#rcond31" name="Worker Bank" predicate="in" implied="true" role="rel3#role6"/>
@@ -28,6 +28,7 @@
         <LinkParameter id="sv1#area1#page24#pwu6#ln4#par35" name="tasksDone_PASSING" source="data[].ent4#att26" passing="true"/>
         <LinkParameter id="sv1#area1#page24#pwu6#ln4#par39" name="tasksSatisfied_PASSING" source="data[].ent4#att27" passing="true"/>
         <LinkParameter id="sv1#area1#page24#pwu6#ln4#par48" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par113" passing="true"/>
+        <LinkParameter id="sv1#area1#page24#pwu6#ln4#par77" name="oid_task_PASSING" sourceLinkParameter="sv1#area1#page19#inu2#ln28#par69" passing="true"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>
@@ -35,14 +36,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page24#pwu6">
-          <layout:Attribute attribute="email"/>
+          <layout:Link link="sv1#area1#page24#pwu6#ln30"/>
+          <layout:Link link="sv1#area1#page24#pwu6#ln14"/>
+          <layout:Link link="sv1#area1#page24#pwu6#ln4"/>
           <layout:Attribute attribute="ent4#att13"/>
           <layout:Attribute attribute="ent4#att14"/>
           <layout:Attribute attribute="ent4#att15"/>
           <layout:Attribute attribute="rel3#role5.ent5#att25"/>
-          <layout:Link link="sv1#area1#page24#pwu6#ln30"/>
-          <layout:Link link="sv1#area1#page24#pwu6#ln14"/>
-          <layout:Link link="sv1#area1#page24#pwu6#ln4"/>
+          <layout:Attribute attribute="email"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
