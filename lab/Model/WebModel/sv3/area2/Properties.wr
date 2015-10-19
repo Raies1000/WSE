@@ -1,0 +1,13 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-5" gr:y="1065" id="sv3#area2" name="Search Tasks" landmark="true" defaultPage="sv3#area2#page4">
+  <OperationUnits>
+    <ConnectUnit id="sv3#area2#cnu2" name="Connect Task to Worker" gr:x="0" gr:y="70" relationship="rel4#role8">
+      <SourceSelector id="sv3#area2#cnu2#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area2#cnu2#su10#kcond3" name="KeyCondition20" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv3#area2#cnu2#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area2#cnu2#su12#kcond13" name="KeyCondition21" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv3#area2#cnu2#oln3" name="OKFlow3" to="sv3#area2#page4" automaticCoupling="true"/>
+    </ConnectUnit>
+  </OperationUnits>
+</Area>

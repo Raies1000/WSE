@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page41" name="Items of Task" gr:x="270" gr:y="805">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page41" name="Items of Task" gr:x="270" gr:y="740">
   <ContentUnits>
     <PowerIndexUnit id="sv3#area3#page41#pwu12" name="Items" linkOrder="sv3#area3#page41#pwu12#ln66" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11">
       <Selector id="sv3#area3#page41#pwu12#su41" defaultPolicy="fill" booleanOperator="and">
