@@ -1,10 +1,10 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page32" name="RegisterWorker" gr:x="420" gr:y="145">
   <ContentUnits>
     <EntryUnit id="sv2#page32#enu13" name="register" linkOrder="sv2#page32#enu13#ln48" gr:x="0" gr:y="0" fieldOrder="sv2#page32#enu13#fld44 sv2#page32#enu13#fld43 sv2#page32#enu13#fld42 sv2#page32#enu13#fld45 sv2#page32#enu13#fld46">
-      <Field id="sv2#page32#enu13#fld42" name="email" type="string" modifiable="true"/>
-      <Field id="sv2#page32#enu13#fld43" name="password" type="string" modifiable="true"/>
-      <Field id="sv2#page32#enu13#fld44" name="username" type="string" modifiable="true"/>
-      <Field id="sv2#page32#enu13#fld45" name="name" type="string" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld42" name="Email" type="string" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld43" name="Password" type="password" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld44" name="Username" type="string" modifiable="true"/>
+      <Field id="sv2#page32#enu13#fld45" name="Name" type="string" modifiable="true"/>
       <Field id="sv2#page32#enu13#fld46" name="Birthday" type="date" modifiable="true"/>
       <Link id="sv2#page32#enu13#ln48" name="Register" to="sv2#cru19" type="normal" validate="true">
         <LinkParameter id="sv2#page32#enu13#ln48#par180" name="Accuracy score_AccuracyScore" target="sv2#cru19.ent4#att15" sourceValue="0"/>

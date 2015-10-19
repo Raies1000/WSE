@@ -1,9 +1,9 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page34" name="Login" gr:x="10" gr:y="215">
   <ContentUnits>
-    <EntryUnit id="sv2#page34#enu15" name="login" linkOrder="sv2#page34#enu15#ln51" gr:x="0" gr:y="0" fieldOrder="sv2#page34#enu15#fld52 sv2#page34#enu15#fld51" entity="User">
+    <EntryUnit id="sv2#page34#enu15" name="Login" linkOrder="sv2#page34#enu15#ln51" gr:x="0" gr:y="0" fieldOrder="sv2#page34#enu15#fld52 sv2#page34#enu15#fld51" entity="User">
       <Field id="sv2#page34#enu15#fld51" name="Password" type="password" modifiable="true"/>
       <Field id="sv2#page34#enu15#fld52" name="Username" type="string" modifiable="true"/>
-      <Link id="sv2#page34#enu15#ln51" name="login" to="sv2#lgu5" type="normal" validate="true">
+      <Link id="sv2#page34#enu15#ln51" name="Login" to="sv2#lgu5" type="normal" validate="true">
         <LinkParameter id="sv2#page34#enu15#ln51#par200" name="UserName_Username" source="sv2#page34#enu15#fld52" target="sv2#lgu5.username"/>
         <LinkParameter id="sv2#page34#enu15#ln51#par201" name="Password_Password" source="sv2#page34#enu15#fld51" target="sv2#lgu5.password"/>
       </Link>

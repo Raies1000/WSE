@@ -1,10 +1,10 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page33" name="RegisterRequester" gr:x="455" gr:y="0">
   <ContentUnits>
     <EntryUnit id="sv2#page33#enu14" name="register" linkOrder="sv2#page33#enu14#ln49" gr:x="0" gr:y="0" fieldOrder="sv2#page33#enu14#fld49 sv2#page33#enu14#fld48 sv2#page33#enu14#fld47 sv2#page33#enu14#fld50">
-      <Field id="sv2#page33#enu14#fld47" name="email" type="string" modifiable="true"/>
-      <Field id="sv2#page33#enu14#fld48" name="password" type="string" modifiable="true"/>
-      <Field id="sv2#page33#enu14#fld49" name="username" type="string" modifiable="true"/>
-      <Field id="sv2#page33#enu14#fld50" name="name" type="string" modifiable="true"/>
+      <Field id="sv2#page33#enu14#fld47" name="Email" type="string" modifiable="true"/>
+      <Field id="sv2#page33#enu14#fld48" name="Password" type="password" modifiable="true"/>
+      <Field id="sv2#page33#enu14#fld49" name="Username" type="string" modifiable="true"/>
+      <Field id="sv2#page33#enu14#fld50" name="Name" type="string" modifiable="true"/>
       <Link id="sv2#page33#enu14#ln49" name="Register" to="sv2#cru20" type="normal" validate="true">
         <LinkParameter id="sv2#page33#enu14#ln49#par187" name="email_PASSING" source="sv2#page33#enu14#fld47" passing="true"/>
         <LinkParameter id="sv2#page33#enu14#ln49#par188" name="name_PASSING" source="sv2#page33#enu14#fld50" passing="true"/>
