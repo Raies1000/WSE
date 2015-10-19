@@ -1,8 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page37" name="Pending Items of Task" gr:x="460" gr:y="350">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page37" name="Items of Task" gr:x="460" gr:y="350">
   <ContentUnits>
     <PowerIndexUnit id="sv3#area3#page37#pwu10" name="Items" linkOrder="sv3#area3#page37#pwu10#ln61" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11">
       <Selector id="sv3#area3#page37#pwu10#su38" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv3#area3#page37#pwu10#su38#rcond15" name="pendingItems" predicate="notIn" implied="false" role="rel12#role24.rel5#role9"/>
+        <RelationshipRoleCondition id="sv3#area3#page37#pwu10#su38#rcond15" name="RoleCondition1" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
       <Link id="sv3#area3#page37#pwu10#ln61" name="Add Annotation" to="sv3#area3#page40#enu16" type="normal" validate="true">
         <LinkParameter id="sv3#area3#page37#pwu10#ln61#par211" name="oid_item_PASSING" source="data[].ent3#att8" passing="true"/>

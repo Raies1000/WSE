@@ -2,10 +2,8 @@
   <ContentUnits>
     <PowerIndexUnit id="sv3#area3#page39#pwu11" name="Items" linkOrder="sv3#area3#page39#pwu11#ln63" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att9 ent3#att10 ent3#att11">
       <Selector id="sv3#area3#page39#pwu11#su40" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv3#area3#page39#pwu11#su40#rcond20" name="Items Of Task" predicate="in" implied="false" role="rel1#role2"/>
-        <AttributesCondition id="sv3#area3#page39#pwu11#su40#acond11" name="AttCondition19" predicate="notNull" booleanOperator="and" implied="false" attributes="rel1#role1.ent1#att1"/>
-        <AttributesCondition id="sv3#area3#page39#pwu11#su40#acond12" name="AttCondition20" predicate="notNull" booleanOperator="and" implied="false" attributes="rel14#role28.ent7#att20"/>
-        <AttributesCondition id="sv3#area3#page39#pwu11#su40#acond13" name="AttCondition21" predicate="notNull" booleanOperator="and" implied="false" attributes="rel5#role10.ent6#att17"/>
+        <AttributesCondition id="sv3#area3#page39#pwu11#su40#acond11" name="Item to task id" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role1.ent1#att1"/>
+        <AttributesCondition id="sv3#area3#page39#pwu11#su40#acond13" name="item has annotation" predicate="eq" booleanOperator="and" implied="false" attributes="rel5#role10.rel12#role23.ent1#att1"/>
       </Selector>
       <Link id="sv3#area3#page39#pwu11#ln63" name="View Annotation" to="sv3#area3#page38#dau1" type="normal" validate="true">
         <LinkParameter id="sv3#area3#page39#pwu11#ln63#par213" name="oid_item_ItemToAnnotation [oid_item]" source="data[].ent3#att8" target="sv3#area3#page38#dau1#su39#rcond19.ent3#att8"/>

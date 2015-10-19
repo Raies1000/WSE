@@ -8,9 +8,10 @@
       <Link id="sv3#area3#page42#pwu13#ln67" name="View Completed Items of Task" to="sv3#area3#page39#pwu11" type="normal" validate="true">
         <LinkParameter id="sv3#area3#page42#pwu13#ln67#par225" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
         <LinkParameter id="sv3#area3#page42#pwu13#ln67#par226" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv3#area3#page42#gtu12#ln69#par231" passing="true"/>
-        <LinkParameter id="sv3#area3#page42#pwu13#ln67#par227" name="oid_task_Items Of Task [oid_task]" source="data[].ent1#att1" target="sv3#area3#page39#pwu11#su40#rcond20.ent1#att1"/>
+        <LinkParameter id="sv3#area3#page42#pwu13#ln67#par1" name="oid_task_Item to task id" source="data[].ent1#att1" target="sv3#area3#page39#pwu11#su40#acond11"/>
+        <LinkParameter id="sv3#area3#page42#pwu13#ln67#par2" name="oid_task_item has annotation" source="data[].ent1#att1" target="sv3#area3#page39#pwu11#su40#acond13"/>
       </Link>
-      <Link id="sv3#area3#page42#pwu13#ln68" name="View Pending Tasks" to="sv3#area3#page37#pwu10" type="normal" validate="true">
+      <Link id="sv3#area3#page42#pwu13#ln68" name="View Tasks" to="sv3#area3#page37#pwu10" type="normal" validate="true">
         <LinkParameter id="sv3#area3#page42#pwu13#ln68#par228" name="oid_task_RoleCondition1 [oid_task]" source="data[].ent1#att1" target="sv3#area3#page37#pwu10#su38#rcond15.ent1#att1"/>
         <LinkParameter id="sv3#area3#page42#pwu13#ln68#par229" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
       </Link>
