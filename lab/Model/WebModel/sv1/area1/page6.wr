@@ -1,11 +1,12 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="0" id="sv1#area1#page6" name="RequesterHome" landmark="true">
   <ContentUnits>
-    <MultiMessageUnit gr:x="5" gr:y="5" id="sv1#area1#page6#mssu6" name="homemsg">
+    <MultiMessageUnit gr:x="5" gr:y="5" id="sv1#area1#page6#mssu6" name="Welcome">
       <Message xml:space="preserve">requester's home</Message>
     </MultiMessageUnit>
-    <IndexUnit gr:x="0" gr:y="150" id="sv1#area1#page6#inu1" name="Campaigns List" entity="ent7" displayAttributes="ent7#att21 ent7#att23 ent7#att22" linkOrder="sv1#area1#page6#inu1#ln36 sv1#area1#page6#inu1#ln38 sv1#area1#page6#inu1#ln40 sv1#area1#page6#inu1#ln13">
+    <IndexUnit gr:x="0" gr:y="150" id="sv1#area1#page6#inu1" name="Open Campaigns" entity="ent7" displayAttributes="ent7#att21 ent7#att22" linkOrder="sv1#area1#page6#inu1#ln36 sv1#area1#page6#inu1#ln38 sv1#area1#page6#inu1#ln40 sv1#area1#page6#inu1#ln13">
       <Selector id="sv1#area1#page6#inu1#su14" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page6#inu1#su14#acond1" name="oid" predicate="eq" booleanOperator="or" implied="false" attributes="rel9#role18.userOID"/>
+        <AttributesCondition id="sv1#area1#page6#inu1#su14#acond8" name="closed" predicate="eq" booleanOperator="and" implied="false" attributes="ent7#att23" value="false"/>
       </Selector>
       <Link id="sv1#area1#page6#inu1#ln36" name="Add Item" to="sv1#area1#page17#enu8" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page6#inu1#ln36#par58" name="oid_campaign_PASSING" source="data[].ent7#att20" passing="true"/>
@@ -26,7 +27,19 @@
       <Link id="sv1#area1#page6#gtu3#ln35" name="Flow35" to="sv1#area1#page6#inu1" type="transport" validate="true">
         <LinkParameter id="sv1#area1#page6#gtu3#ln35#par57" name="UserCtxParam.oid_oid" source="sv1#area1#page6#gtu3.UserCtxParam" target="sv1#area1#page6#inu1#su14#acond1"/>
       </Link>
+      <Link id="sv1#area1#page6#gtu3#ln9" name="Flow9" to="sv1#area1#page6#inu6" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page6#gtu3#ln9#par80" name="UserCtxParam.oid_campaigntorequester [oid]" source="sv1#area1#page6#gtu3.UserCtxParam" target="sv1#area1#page6#inu6#su20#rcond1.userOID"/>
+      </Link>
     </GetUnit>
+    <IndexUnit gr:x="5" gr:y="285" id="sv1#area1#page6#inu6" name="Closed Campaigns" entity="ent7" displayAttributes="ent7#att21 ent7#att22" linkOrder="sv1#area1#page6#inu6#ln8">
+      <Selector id="sv1#area1#page6#inu6#su20" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area1#page6#inu6#su20#acond7" name="Closed" predicate="eq" booleanOperator="or" implied="false" attributes="ent7#att23" value="true"/>
+        <RelationshipRoleCondition id="sv1#area1#page6#inu6#su20#rcond1" name="campaigntorequester" predicate="in" implied="false" role="rel9#role17"/>
+      </Selector>
+      <Link id="sv1#area1#page6#inu6#ln8" name="View Campaign Tasks" to="sv1#area1#page19#inu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page6#inu6#ln8#par75" name="oid_campaign_oid_campaign" source="data[].ent7#att20" target="sv1#area1#page19#inu2#su15#acond2"/>
+      </Link>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -48,13 +61,12 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page6#inu1">
-          <layout:Attribute attribute="ent7#att21"/>
-          <layout:Attribute attribute="ent7#att23"/>
-          <layout:Attribute attribute="ent7#att22"/>
           <layout:Link link="sv1#area1#page6#inu1#ln36"/>
           <layout:Link link="sv1#area1#page6#inu1#ln38"/>
           <layout:Link link="sv1#area1#page6#inu1#ln40"/>
           <layout:Link link="sv1#area1#page6#inu1#ln13"/>
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Attribute attribute="ent7#att22"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -70,7 +82,13 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page6#inu6">
+          <layout:Link link="sv1#area1#page6#inu6#ln8"/>
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Attribute attribute="ent7#att22"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

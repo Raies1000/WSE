@@ -189,7 +189,8 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="MyDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/wse" username="postgres" cryptedPassword="true" password="cGluZGFrYWFz" schema="public"/>
+  <db:Database id="db2" name="MyDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/wse" username="postgres" cryptedPassword="true" password="cGluZGFrYWFz" schema="public">
+  </db:Database>
   <Relationship id="rel5" name="Annotation_Item" sourceEntity="ent6" targetEntity="ent3" db:database="db2" db:table="annotation">
     <RelationshipRole1 id="rel5#role9" name="AnnotationToItem" maxCard="1">
       <db:JoinColumn attribute="ent6#att17" name="oid_annotation"/>

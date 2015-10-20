@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="865" gr:y="640" id="sv1#area1#page19" name="View Campaign Tasks">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page19#inu2" name="Task List" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att6" linkOrder="sv1#area1#page19#inu2#ln43 sv1#area1#page19#inu2#ln21 sv1#area1#page19#inu2#ln22 sv1#area1#page19#inu2#ln23 sv1#area1#page19#inu2#ln26 sv1#area1#page19#inu2#ln28">
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page19#inu2" name="Task List" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att6" linkOrder="sv1#area1#page19#inu2#ln43 sv1#area1#page19#inu2#ln21 sv1#area1#page19#inu2#ln22 sv1#area1#page19#inu2#ln23 sv1#area1#page19#inu2#ln28 sv1#area1#page19#inu2#ln29 sv1#area1#page19#inu2#ln32">
       <Selector id="sv1#area1#page19#inu2#su15" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page19#inu2#su15#acond2" name="oid_campaign" predicate="eq" booleanOperator="or" implied="false" attributes="rel8#role16.ent7#att20"/>
       </Selector>
@@ -15,19 +15,24 @@
         <LinkParameter id="sv1#area1#page19#inu2#ln22#par43" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
       </Link>
       <Link id="sv1#area1#page19#inu2#ln23" name="View Required Skills" to="sv1#area1#page22#pwu9" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv1#area1#page19#inu2#ln26" name="Add Workers to Task" to="sv1#area1#page23#mciu6" type="normal" validate="true">
-        <LinkParameter id="sv1#area1#page19#inu2#ln26#par53" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
-        <LinkParameter id="sv1#area1#page19#inu2#ln26#par59" name="oid_task_Not Assigned Worker [oid_task]" source="data[].ent1#att1" target="sv1#area1#page23#mciu6#su30#rcond16.ent1#att1"/>
-        <LinkParameter id="sv1#area1#page19#inu2#ln26#par65" name="MinAccuracy_PASSING" source="data[].ent1#att12" passing="true"/>
-        <LinkParameter id="sv1#area1#page19#inu2#ln26#par66" name="MinAccuracy_Accurracy" source="data[].ent1#att12" target="sv1#area1#page23#mciu6#su30#acond5"/>
-        <LinkParameter id="sv1#area1#page19#inu2#ln26#par67" name="oid_task_Skill of Task of Workers [oid_task]" source="data[].ent1#att1" target="sv1#area1#page23#mciu6#su30#rcond22.ent1#att1"/>
-      </Link>
       <Link id="sv1#area1#page19#inu2#ln28" name="View Workers of Task" to="sv1#area1#page24#pwu6" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page19#inu2#ln28#par68" name="oid_task_Worker of Task [oid_task]" source="data[].ent1#att1" target="sv1#area1#page24#pwu6#su6#rcond14.ent1#att1"/>
         <LinkParameter id="sv1#area1#page19#inu2#ln28#par69" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
         <LinkParameter id="sv1#area1#page19#inu2#ln28#par84" name="Reward_PASSING" source="data[].ent1#att4" passing="true"/>
         <LinkParameter id="sv1#area1#page19#inu2#ln28#par113" name="TaskToAnnotationCampain.oid_campaign_PASSING" source="data[].rel8#role16_ent7#att20" passing="true"/>
         <LinkParameter id="sv1#area1#page19#inu2#ln28#par118" name="Budget_PASSING" sourceLinkParameter="sv1#area1#page6#inu1#ln40#par117" passing="true"/>
+      </Link>
+      <Link id="sv1#area1#page19#inu2#ln29" name="Add Worker" to="sv1#area1#page23#mciu1" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page19#inu2#ln29#par145" name="oid_task_notAlreadyWorking [oid_task]" source="data[].ent1#att1" target="sv1#area1#page23#mciu1#su26#rcond5.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln29#par146" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln29#par150" name="TaskToAnnotationCampain.oid_campaign_PASSING" source="data[].rel8#role16_ent7#att20" passing="true"/>
+      </Link>
+      <Link id="sv1#area1#page19#inu2#ln32" name="Recommended Workers" to="sv1#area1#page5#mciu8" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page19#inu2#ln32#par160" name="oid_task_Not Assigned Worker [oid_task]" source="data[].ent1#att1" target="sv1#area1#page5#mciu8#su44#rcond20.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln32#par161" name="oid_task_Skill of Task of Workers [oid_task]" source="data[].ent1#att1" target="sv1#area1#page5#mciu8#su44#rcond21.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln32#par162" name="TaskToAnnotationCampain.oid_campaign_PASSING" source="data[].rel8#role16_ent7#att20" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln32#par163" name="oid_task_PASSING" source="data[].ent1#att1" passing="true"/>
+        <LinkParameter id="sv1#area1#page19#inu2#ln32#par166" name="MinAccuracy_Accurracy" source="data[].ent1#att12" target="sv1#area1#page5#mciu8#su44#acond10"/>
       </Link>
     </IndexUnit>
   </ContentUnits>
@@ -42,8 +47,9 @@
           <layout:Link link="sv1#area1#page19#inu2#ln21"/>
           <layout:Link link="sv1#area1#page19#inu2#ln22"/>
           <layout:Link link="sv1#area1#page19#inu2#ln23"/>
-          <layout:Link link="sv1#area1#page19#inu2#ln26"/>
           <layout:Link link="sv1#area1#page19#inu2#ln28"/>
+          <layout:Link link="sv1#area1#page19#inu2#ln29"/>
+          <layout:Link link="sv1#area1#page19#inu2#ln32"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

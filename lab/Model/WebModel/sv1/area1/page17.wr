@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="340" gr:y="600" id="sv1#area1#page17" name="AddItems">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="340" gr:y="600" id="sv1#area1#page17" name="Add Item">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page17#enu8" name="addItems" fieldOrder="sv1#area1#page17#enu8#fld24 sv1#area1#page17#enu8#fld25 sv1#area1#page17#enu8#fld26" linkOrder="sv1#area1#page17#enu8#ln37">
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page17#enu8" name="Add Item" fieldOrder="sv1#area1#page17#enu8#fld24 sv1#area1#page17#enu8#fld25 sv1#area1#page17#enu8#fld26" linkOrder="sv1#area1#page17#enu8#ln37">
       <Field id="sv1#area1#page17#enu8#fld26" name="URL" type="string" modifiable="true"/>
       <Field id="sv1#area1#page17#enu8#fld25" name="Caption" type="string" modifiable="true"/>
       <Field id="sv1#area1#page17#enu8#fld24" name="Title" type="string" modifiable="true"/>

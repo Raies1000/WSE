@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="715" gr:y="1185" id="sv1#area1#page24" name="View Workers of Task">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="635" gr:y="1190" id="sv1#area1#page24" name="View Workers of Task">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page24#pwu6" name="Workers" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att13 ent4#att14 ent4#att15 rel3#role5.ent5#att25 email" linkOrder="sv1#area1#page24#pwu6#ln30 sv1#area1#page24#pwu6#ln14 sv1#area1#page24#pwu6#ln4">
       <Selector id="sv1#area1#page24#pwu6#su6" defaultPolicy="fill" booleanOperator="and">

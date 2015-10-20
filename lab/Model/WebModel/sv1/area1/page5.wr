@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1440" gr:y="1470" id="sv1#area1#page5" name="Recommended Workers">
+  <ContentUnits>
+    <MultiChoiceIndexUnit id="sv1#area1#page5#mciu8" name="Recommended Workers" gr:x="0" gr:y="0" entity="ent4" displayAttributes="email ent4#att13 ent4#att15" linkOrder="sv1#area1#page5#mciu8#ln44">
+      <Selector id="sv1#area1#page5#mciu8#su44" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area1#page5#mciu8#su44#rcond20" name="Not Assigned Worker" predicate="notIn" implied="false" role="rel4#role8"/>
+        <AttributesCondition id="sv1#area1#page5#mciu8#su44#acond10" name="Accurracy" predicate="gteq" booleanOperator="and" implied="false" attributes="ent4#att15"/>
+        <RelationshipRoleCondition id="sv1#area1#page5#mciu8#su44#rcond21" name="Skill of Task of Workers" predicate="in" implied="false" role="rel6#role12.rel2#role4"/>
+      </Selector>
+      <Link id="sv1#area1#page5#mciu8#ln44" name="Add Workers" to="sv1#area1#cnu8" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page5#mciu8#ln44#par171" name="oid_task_PASSING_KeyCondition5 [oid_task] [Task] [Source]" sourceLinkParameter="sv1#area1#page19#inu2#ln32#par163" target="sv1#area1#cnu8#su45#kcond17.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page5#mciu8#ln44#par172" name="Checked oid_KeyCondition8 [oid] [Worker] [Target]" source="userOIDChecked" target="sv1#area1#cnu8#su46#kcond22.userOID"/>
+        <LinkParameter id="sv1#area1#page5#mciu8#ln44#par173" name="TaskToAnnotationCampain.oid_campaign_PASSING" sourceLinkParameter="sv1#area1#page19#inu2#ln32#par162" passing="true"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page5#mciu8">
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="ent4#att13"/>
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Link link="sv1#area1#page5#mciu8#ln44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
